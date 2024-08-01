@@ -4,7 +4,7 @@ import Swal from "sweetalert2"
 
 export const Booking = () => {
   const inputRef = useRef(null)
-  const [showModal, setShowModal] = useState(false)
+  const [showModal, setShowModal] = useState(true)
   const [firstMessageUrl, setFirstMessageUrl] = useState("")
   const [secondMessageUrl, setSecondMessageUrl] = useState("")
 
@@ -151,9 +151,6 @@ export const Booking = () => {
   }
 
   const appointmentId = generateHumanReadableID()
-  const receiveConfirmation = () => {
-    window.open(secondMessageUrl, "_blank")
-  }
   // * booking an appointment
   const handleBooking = () => {
     if (validateForm()) {
@@ -186,9 +183,9 @@ export const Booking = () => {
 
       let appointmentDate = date.toLocaleString("en-IN", options)
 
-      const cancelUrl = `https://wa.me/${ownerNumber}?text=Cancel%20the%20appointment%20for%20${firstName}%20${lastName}%20(ID:%20${appointmentId})%20Confirm%20Cancel%20Appointment:https://wa.me/${userNumber}?text=Confirmed%20Cancelation%20for%20${firstName}%20${lastName}%20ID:%20${appointmentId})`
+      const cancelUrl = `https://wa.me/${ownerNumber}?text=Cancel%20the%20appointment%20for%20${firstName}%20${lastName}%20(ID:%20${appointmentId})%20Confirm%20cancel%20Appointment:https://wa.me/${userNumber}?text=Cancelled`
 
-      const rescheduleUrl = `https://wa.me/${ownerNumber}?text=Reschedule%20the%20appointment%20for%20${firstName}%20${lastName}%20(ID:%20${appointmentId})%20to`
+      const rescheduleUrl = `https://wa.me/${ownerNumber}?text=Reschedule%20the%20appointment%20for%20${firstName}%20${lastName}%20(ID:%20${appointmentId})%20to%20`
 
       // * Message to the user
       const userMessage = `Dear *${firstName}*\nYou have successfully booked an appointment ID:*${appointmentId}*\nwith *Mr.kanav goyal* for ${appointmentDate}\nat *271, Sukhmani enclave, South city, Canal Road, Ludhiana 141012* for *${service}*.\nPlease contact +${ownerNumber} for any queries.\nTo reschedule/cancel please select option below and for rescheduling please mention the new date.\n*-Bhaargav Finco*
@@ -207,24 +204,24 @@ export const Booking = () => {
 
       window.open(ownerWhatsAppUrl, "_blank")
       setTimeout(() => {
-        setSecondMessageUrl(userWhatsAppUrl)
-      }, 1500)
-      setTimeout(() => {
         Swal.fire({
           html: `
           <div>
             <p class="font-Sora">Once you have sent the booking message click the button to receive your confirmation message</p>
+            <button class="text-white px-8 py-1 bg-primary-downloadBtn rounded-md border-2 border-transparent hover:border-primary-downloadBtn hover:text-primary-downloadBtn hover:bg-white transition-all">
+              <a href=${userWhatsAppUrl}>Receive</a>
+            </button>
           </div>
         `,
-          showConfirmButton: true,
           showCloseButton: true,
-          confirmButtonText: "Receive Confirmation",
+          showCancelButton: false,
+          showConfirmButton: false,
         }).then((result) => {
           if (result.isConfirmed) {
-            receiveConfirmation()
+            handleBooking()
           }
         })
-      }, 2000)
+      }, 3000)
 
       setFormData({
         service: "",
