@@ -151,6 +151,9 @@ export const Booking = () => {
   }
 
   const appointmentId = generateHumanReadableID()
+  const receiveConfirmation = () => {
+    window.open(secondMessageUrl, "_blank")
+  }
   // * booking an appointment
   const handleBooking = () => {
     if (validateForm()) {
@@ -183,11 +186,7 @@ export const Booking = () => {
 
       let appointmentDate = date.toLocaleString("en-IN", options)
 
-      const cancelBackMsg = `Confirmed Cancelation for ${firstName} ${lastName} (ID: ${appointmentId})`
-
-      const cancelUrl = `https://wa.me/${ownerNumber}?text=Cancel%20the%20appointment%20for%20${firstName}%20${lastName}%20(ID:%20${appointmentId})%20Confirm%20Cancel%20Appointment:https://wa.me/${userNumber}?text=${encodeURIComponent(
-        cancelBackMsg
-      )}`
+      const cancelUrl = `https://wa.me/${ownerNumber}?text=Cancel%20the%20appointment%20for%20${firstName}%20${lastName}%20(ID:%20${appointmentId})%20Confirm%20Cancel%20Appointment:https://wa.me/${userNumber}?text=Confirmed%20Cancelation%20for%20${firstName}%20${lastName}%20ID:%20${appointmentId})`
 
       const rescheduleUrl = `https://wa.me/${ownerNumber}?text=Reschedule%20the%20appointment%20for%20${firstName}%20${lastName}%20(ID:%20${appointmentId})%20to`
 
@@ -206,11 +205,6 @@ export const Booking = () => {
         ownerMessage
       )}`
 
-      const receiveConfirmMessage = `
-      <a href=${secondMessageUrl} target="_blank" rel="noopener noreferrer">
-            Confirm Booking
-      </a>`
-
       window.open(ownerWhatsAppUrl, "_blank")
       setTimeout(() => {
         setSecondMessageUrl(userWhatsAppUrl)
@@ -218,17 +212,17 @@ export const Booking = () => {
       setTimeout(() => {
         Swal.fire({
           html: `
-          <div class="flex flex-col gap-4 items-center">
-            <p class="font-Sora font-semibold">Click the button to receive your confirmation message</p>
-            <button class="text-white px-8 py-1 bg-primary-purple rounded-md border-2 border-transparent hover:border-primary-purple hover:text-primary-purple hover:bg-white transition-all">
-              <a href=${secondMessageUrl} target="_blank" rel="noopener noreferrer">
-                Receive confirmation
-              </a>
-            </button>
+          <div>
+            <p class="font-Sora">Once you have sent the booking message click the button to receive your confirmation message</p>
           </div>
         `,
-          showConfirmButton: false,
+          showConfirmButton: true,
           showCloseButton: true,
+          confirmButtonText: "Receive Confirmation",
+        }).then((result) => {
+          if (result.isConfirmed) {
+            receiveConfirmation()
+          }
         })
       }, 2000)
 
