@@ -185,12 +185,16 @@ export const Booking = () => {
       const rescheduleUrl = `https://wa.me/${ownerNumber}?text=Reschedule%20the%20appointment%20for%20${firstName}%20${lastName}%20(ID:%20${appointmentId})%20to%20`
 
       // * Message to the user
-      const userMessage = `Dear *${firstName}*\nYou have successfully booked an appointment ID:*${appointmentId}*\nwith *Mr.kanav goyal* for ${appointmentDate}\nat *271, Sukhmani enclave, South city, Canal Road, Ludhiana 141012*\nfor *${service}*.\nPlease contact +${ownerNumber} for any queries.\nTo reschedule/cancel please select option below and for rescheduling please mention the new date.\n*-Bhaargav Finco*
+      const userMessage = `Dear *${firstName.trim(
+        " "
+      )}*\nYou have successfully booked an appointment ID:*${appointmentId}*\nwith *Mr.kanav goyal* for ${appointmentDate}\nat *271, Sukhmani enclave, South city, Canal Road, Ludhiana 141012*\nfor *${service}*.\nPlease contact +${ownerNumber} for any queries.\nTo reschedule/cancel please select option below and for rescheduling please mention the new date.\n*-Bhaargav Finco*
       \n\nCancel Appointment: ${cancelUrl}
       \nReschedule Appointment: ${rescheduleUrl}`.trim()
 
       // * Message to the owner
-      const ownerMessage = `Hello, I have booked an appointment with ID: *${appointmentId}*\n for *${service}* on *${appointmentDate}*.\nMy personal details are - \n*${firstName} ${lastName}*\n${dob}\n${mobile}\nAadhar Card: ${aadhar}\nPanCard: ${pan}\nHome Address: ${address}\n${pincode}`.trim()
+      const ownerMessage = `Hello, I have booked an appointment with ID: *${appointmentId}*\n for *${service}* on *${appointmentDate}*.\nMy personal details are - \n*${firstName} ${lastName.trim(
+        " "
+      )}*\n${dob}\n${mobile}\nAadhar Card: ${aadhar}\nPanCard: ${pan}\nHome Address: ${address}\n${pincode}`.trim()
 
       const userWhatsAppUrl = `https://wa.me/${userNumber}?text=${encodeURIComponent(
         userMessage
@@ -206,7 +210,7 @@ export const Booking = () => {
           <div class="flex flex-col gap-4 items-center">
             <p class="font-Sora">Once you have sent the booking message click the button to receive your confirmation message</p>
             <button class="text-white px-8 py-1 bg-primary-purple rounded-md border-2 border-transparent hover:border-primary-purple hover:text-primary-purple hover:bg-white transition-all">
-              <a href=${userWhatsAppUrl}>Receive</a>
+              <a href=${userWhatsAppUrl} target="_blank">Receive</a>
             </button>
           </div>
         `,
