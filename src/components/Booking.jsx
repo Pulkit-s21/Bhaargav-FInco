@@ -4,6 +4,10 @@ import Swal from "sweetalert2"
 
 export const Booking = () => {
   const inputRef = useRef(null)
+  const [showModal, setShowModal] = useState(false)
+  const [firstMessageUrl, setFirstMessageUrl] = useState("")
+  const [secondMessageUrl, setSecondMessageUrl] = useState("")
+
   useEffect(() => {
     const today = new Date()
     const threeWeeksFromToday = new Date()
@@ -181,33 +185,52 @@ export const Booking = () => {
 
       const cancelBackMsg = `Confirmed Cancelation for ${firstName} ${lastName} (ID: ${appointmentId})`
 
-      const cancelUrl = `https://api.whatsapp.com/send?phone=${ownerNumber}&text=Cancel%20the%20appointment%20for%20${firstName}%20${lastName}%20(ID:%20${appointmentId})`
+      const cancelUrl = `https://wa.me/${ownerNumber}?text=Cancel%20the%20appointment%20for%20${firstName}%20${lastName}%20(ID:%20${appointmentId})%20Confirm%20Cancel%20Appointment:https://wa.me/${userNumber}?text=${encodeURIComponent(
+        cancelBackMsg
+      )}`
 
-      const rescheduleUrl = `https://api.whatsapp.com/send?phone=${ownerNumber}&text=Reschedule%20the%20appointment%20for%20${firstName}%20${lastName}%20(ID:%20${appointmentId})%20to`
+      const rescheduleUrl = `https://wa.me/${ownerNumber}?text=Reschedule%20the%20appointment%20for%20${firstName}%20${lastName}%20(ID:%20${appointmentId})%20to`
 
       // * Message to the user
       const userMessage = `Dear *${firstName}*\nYou have successfully booked an appointment ID:*${appointmentId}*\nwith *Mr.kanav goyal* for ${appointmentDate}\nat *271, Sukhmani enclave, South city, Canal Road, Ludhiana 141012* for *${service}*.\nPlease contact +${ownerNumber} for any queries.\nTo reschedule/cancel please select option below and for rescheduling please mention the new date.\n*-Bhaargav Finco*
       \n\nCancel Appointment: ${cancelUrl}
-      \nReschedule Appointment: ${rescheduleUrl}
-      `.trim()
+      \nReschedule Appointment: ${rescheduleUrl}`.trim()
 
       // * Message to the owner
-      const ownerMessage = `
-      Hello, I have booked an appointment with ID: *${appointmentId}*\n for *${service}* on *${appointmentDate}*.\nMy personal details are - \n*${firstName} ${lastName}*\n${dob}\n${mobile}\nAadhar Card: ${aadhar}\nPanCard: ${pan}\nHome Address: ${address}\n${pincode}
-        `.trim()
+      const ownerMessage = `Hello, I have booked an appointment with ID: *${appointmentId}*\n for *${service}* on *${appointmentDate}*.\nMy personal details are - \n*${firstName} ${lastName}*\n${dob}\n${mobile}\nAadhar Card: ${aadhar}\nPanCard: ${pan}\nHome Address: ${address}\n${pincode}`.trim()
 
-      const userWhatsAppUrl = `https://api.whatsapp.com/send?phone=${userNumber}&text=${encodeURIComponent(
+      const userWhatsAppUrl = `https://wa.me/${userNumber}?text=${encodeURIComponent(
         userMessage
       )}`
-      const ownerWhatsAppUrl = `https://api.whatsapp.com/send?phone=${ownerNumber}&text=${encodeURIComponent(
+      const ownerWhatsAppUrl = `https://wa.me/${ownerNumber}?text=${encodeURIComponent(
         ownerMessage
       )}`
 
-      window.open(ownerWhatsAppUrl, "_blank")
+      const receiveConfirmMessage = `
+      <a href=${secondMessageUrl} target="_blank" rel="noopener noreferrer">
+            Confirm Booking
+      </a>`
 
+      window.open(ownerWhatsAppUrl, "_blank")
       setTimeout(() => {
-        window.open(userWhatsAppUrl, "_blank")
-      }, 5000)
+        setSecondMessageUrl(userWhatsAppUrl)
+      }, 1500)
+      setTimeout(() => {
+        Swal.fire({
+          html: `
+          <div class="flex flex-col gap-4 items-center">
+            <p class="font-Sora font-semibold">Click the button to receive your confirmation message</p>
+            <button class="text-white px-8 py-1 bg-primary-purple rounded-md border-2 border-transparent hover:border-primary-purple hover:text-primary-purple hover:bg-white transition-all">
+              <a href=${secondMessageUrl} target="_blank" rel="noopener noreferrer">
+                Receive confirmation
+              </a>
+            </button>
+          </div>
+        `,
+          showConfirmButton: false,
+          showCloseButton: true,
+        })
+      }, 2000)
 
       setFormData({
         service: "",
@@ -490,6 +513,15 @@ export const Booking = () => {
           </button>
         </div>
       </form>
+
+      {firstMessageUrl && !showModal && (
+        <div>
+          <p>Click the link below to confirm the booking:</p>
+          <a href={secondMessageUrl} target="_blank" rel="noopener noreferrer">
+            Confirm Booking
+          </a>
+        </div>
+      )}
     </section>
   )
 }
