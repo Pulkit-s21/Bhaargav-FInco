@@ -183,7 +183,7 @@ export const Booking = () => {
 
       const cancelUrl = `https://api.whatsapp.com/send?phone=${ownerNumber}&text=Cancel%20the%20appointment%20for%20${firstName}%20${lastName}%20(ID:%20${appointmentId})`
 
-      const rescheduleUrl = `https://api.whatsapp.com/send?phone=${ownerNumber}&text=Reschedule%20the%20appointment%20for%20${firstName}%20${lastName}%20(ID:%20${appointmentId})%20to`
+      const rescheduleUrl = `https://api.whatsapp.com/send?phone=${ownerNumber}&text=Reschedule%20the%20appointment%20for%20${firstName}%20${lastName}%20(ID:%20${appointmentId})%20to` 
 
       // * Message to the user
       const userMessage = `Dear *${firstName}*\nYou have successfully booked an appointment ID:*${appointmentId}*\nwith *Mr.kanav goyal* for ${appointmentDate}\nat *271, Sukhmani enclave, South city, Canal Road, Ludhiana 141012* for *${service}*.\nPlease contact +${ownerNumber} for any queries.\nTo reschedule/cancel please select option below and for rescheduling please mention the new date.\n*-Bhaargav Finco*
