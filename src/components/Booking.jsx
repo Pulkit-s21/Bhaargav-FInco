@@ -181,11 +181,9 @@ export const Booking = () => {
 
       const cancelBackMsg = `Confirmed Cancelation for ${firstName} ${lastName} (ID: ${appointmentId})`
 
-      const cancelUrl = `https://wa.me/${ownerNumber}?text=Cancel%20the%20appointment%20for%20${firstName}%20${lastName}%20(ID:%20${appointmentId})%20Confirm%20Cancel%20Appointment:https://wa.me/${userNumber}?text=${encodeURIComponent(
-        cancelBackMsg
-      )}`
+      const cancelUrl = `https://api.whatsapp.com/send?phone=${ownerNumber}&text=Cancel%20the%20appointment%20for%20${firstName}%20${lastName}%20(ID:%20${appointmentId})`
 
-      const rescheduleUrl = `https://wa.me/${ownerNumber}?text=Reschedule%20the%20appointment%20for%20${firstName}%20${lastName}%20(ID:%20${appointmentId})%20to`
+      const rescheduleUrl = `https://api.whatsapp.com/send?phone=${ownerNumber}&text=Reschedule%20the%20appointment%20for%20${firstName}%20${lastName}%20(ID:%20${appointmentId})%20to`
 
       // * Message to the user
       const userMessage = `Dear *${firstName}*\nYou have successfully booked an appointment ID:*${appointmentId}*\nwith *Mr.kanav goyal* for ${appointmentDate}\nat *271, Sukhmani enclave, South city, Canal Road, Ludhiana 141012* for *${service}*.\nPlease contact +${ownerNumber} for any queries.\nTo reschedule/cancel please select option below and for rescheduling please mention the new date.\n*-Bhaargav Finco*
@@ -198,10 +196,10 @@ export const Booking = () => {
       Hello, I have booked an appointment with ID: *${appointmentId}*\n for *${service}* on *${appointmentDate}*.\nMy personal details are - \n*${firstName} ${lastName}*\n${dob}\n${mobile}\nAadhar Card: ${aadhar}\nPanCard: ${pan}\nHome Address: ${address}\n${pincode}
         `.trim()
 
-      const userWhatsAppUrl = `https://wa.me/${userNumber}?text=${encodeURIComponent(
+      const userWhatsAppUrl = `https://api.whatsapp.com/send?phone=${userNumber}&text=${encodeURIComponent(
         userMessage
       )}`
-      const ownerWhatsAppUrl = `https://wa.me/${ownerNumber}?text=${encodeURIComponent(
+      const ownerWhatsAppUrl = `https://api.whatsapp.com/send?phone=${ownerNumber}&text=${encodeURIComponent(
         ownerMessage
       )}`
 
