@@ -203,7 +203,7 @@ export const Booking = () => {
       setTimeout(() => {
         Swal.fire({
           html: `
-          <div>
+          <div class="flex flex-col gap-4 items-center">
             <p class="font-Sora">Once you have sent the booking message click the button to receive your confirmation message</p>
             <button class="text-white px-8 py-1 bg-primary-purple rounded-md border-2 border-transparent hover:border-primary-purple hover:text-primary-purple hover:bg-white transition-all">
               <a href=${userWhatsAppUrl}>Receive</a>
