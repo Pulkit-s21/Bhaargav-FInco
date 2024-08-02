@@ -69,6 +69,7 @@ export const AboutPage = () => {
     <section className="grid grid-cols-1 gap-6 py-4">
       <div className="relative lg:px-6">
         <img
+          loading="lazy"
           className="h-[15rem] md:h-[25rem] lg:h-[40rem] w-full"
           src={AboutHero}
           alt="AboutPage Hero Image"
@@ -84,7 +85,7 @@ export const AboutPage = () => {
         </div>
       </div>
 
-      <section className="mt-16 grid grid-cols-1  place-items-center lg:place-items-start px-8 lg:px-24">
+      <section className="mt-16 grid grid-cols-1 place-items-center lg:place-items-start px-8 lg:px-24">
         {/* left Div */}
         <div className="grid grid-cols-1 place-items-center md:place-items-start gap-4 font-Vietnam">
           <p className="text-lg text-primary-purple uppercase font-bold">

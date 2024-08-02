@@ -28,9 +28,9 @@ export const Information = () => {
       <div className="grid grid-cols-1 gap-4 place-items-center lg:place-items-start">
         <h2 className="font-Vietnam font-bold text-center lg:text-start text-3xl md:text-4xl lg:text-6xl max-w-[20ch] capitalize tracking-wider lg:tracking-widest">
           Secure your <span className="lg:block">financial</span> future{" "}
-          <span className="text-4xl text-primary-purple slide-out">{feature}</span>
+          <span className="text-4xl lg:text-5xl text-primary-purple">{feature}</span>
         </h2>
-        <img className="lg:hidden" src={MobileHero} alt="Mobile Image" />
+        <img loading="lazy" className="lg:hidden" src={MobileHero} alt="Mobile Image" />
         <p className="text-neutral-500 text-sm md:text-lg font-Sora md:max-w-[50ch] lg:max-w-[40ch] text-center lg:text-start">
           Bhaargav Finco is a finance and loan company based in Ludhiana, Punjab
           involved in providing various financial services, including personal
