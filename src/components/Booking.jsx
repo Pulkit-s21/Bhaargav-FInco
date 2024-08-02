@@ -165,7 +165,7 @@ export const Booking = () => {
       } = formData
 
       const userNumber = mobile
-      const ownerNumber = +919872459519
+      const ownerNumber = +917087080786
 
       let date = new Date(dateTime)
 
@@ -180,7 +180,7 @@ export const Booking = () => {
 
       let appointmentDate = date.toLocaleString("en-IN", options)
 
-      const cancelUrl = `https://wa.me/${ownerNumber}?text=Cancel%20the%20appointment%20for%20${firstName}%20${lastName}%20(ID:%20${appointmentId})%20Confirm%20cancel%20Appointment:https://wa.me/${userNumber}?text=Cancelled`
+      const cancelUrl = `https://wa.me/${ownerNumber}?text=Cancel%20the%20appointment%20for%20${firstName}%20${lastName}%20ID:%20${appointmentId}%20Confirm%20cancel%20Appointment:https://wa.me/${userNumber}?text=Cancelled`
 
       const rescheduleUrl = `https://wa.me/${ownerNumber}?text=Reschedule%20the%20appointment%20for%20${firstName}%20${lastName}%20(ID:%20${appointmentId})%20to%20`
 
@@ -192,7 +192,7 @@ export const Booking = () => {
       \nReschedule Appointment: ${rescheduleUrl}`.trim()
 
       // * Message to the owner
-      const ownerMessage = `Hello, I have booked an appointment with ID: *${appointmentId}*\n for *${service}* on *${appointmentDate}*.\nMy personal details are - \n*${firstName} ${lastName.trim(
+      const ownerMessage = `Hello, I have booked an appointment with ID: *${appointmentId}*\nfor *${service}* on *${appointmentDate}*.\nMy personal details are - \n*${firstName} ${lastName.trim(
         " "
       )}*\n${dob}\n${mobile}\nAadhar Card: ${aadhar}\nPanCard: ${pan}\nHome Address: ${address}\n${pincode}`.trim()
 

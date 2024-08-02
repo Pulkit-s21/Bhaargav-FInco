@@ -178,8 +178,8 @@ export const ContactUs = () => {
   const details = [
     {
       src: call,
-      detail: "+91 9888444547",
-      href: "tel:+919888444547",
+      detail: "+91 7087080786",
+      href: "tel:+917087080786",
     },
     {
       src: printer,

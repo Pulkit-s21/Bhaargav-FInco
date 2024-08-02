@@ -29,9 +29,9 @@ export const Footer = () => {
     },
     {
       src: call,
-      detail: "+91 9888444547",
+      detail: "+91 7087080786",
       className: "text-primary-purple",
-      href: "tel:+919888444547",
+      href: "tel:+917087080786",
     },
     {
       src: printer,
