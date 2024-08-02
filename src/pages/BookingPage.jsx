@@ -2,8 +2,14 @@ import BookingHero from "../assets/images/BookingHero.png"
 import { Booking } from "../components/Booking"
 import { Newsletter } from "../components/Newsletter"
 import { ContactUs } from "../components/ContactUs"
+import { useLocation } from "react-router-dom"
+import { useLayoutEffect } from "react"
 
 export const BookingPage = () => {
+  const { pathname } = useLocation()
+  useLayoutEffect(() => {
+    window.scrollTo(0, 0)
+  }, [pathname])
   return (
     <section className="grid grid-cols-1 gap-6">
       <div className="relative lg:px-6">

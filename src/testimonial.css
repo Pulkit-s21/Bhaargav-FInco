@@ -1,0 +1,14 @@
+.swiper-pagination {
+    bottom: 0px !important;
+  }
+  
+  .swiper-pagination-bullet {
+    background: #000 !important;
+    opacity: 0.5 !important;
+  }
+  
+  .swiper-pagination-bullet-active {
+    background: purple !important;
+    opacity: 1 !important;
+  }
+  

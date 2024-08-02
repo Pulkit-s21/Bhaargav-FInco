@@ -1,10 +1,10 @@
 import { Link } from "react-router-dom"
 export const About = () => {
   return (
-    <section className="mt-16 grid grid-cols-1  place-items-center lg:place-items-start px-8">
+    <section className="mt-16 grid grid-cols-1  place-items-center lg:place-items-start px-8 lg:px-24">
       {/* left Div */}
       <div className="grid grid-cols-1 place-items-center lg:place-items-start gap-4 font-Vietnam">
-        <p className="text-xl md:text-2xl lg:text-3xl text-primary-purple uppercase font-bold">
+        <p className="text-xl md:text-2xl text-primary-purple uppercase font-bold">
           about us
         </p>
         <div className="grid grid-cols-1 lg:grid-cols-2">
@@ -12,8 +12,8 @@ export const About = () => {
             What Bhaargav Finco is and Why it exists
           </p>
 
-          <div className="grid grid-cols-1 place-items-center gap-4 md:max-w-[55ch] lg:max-w-[75ch]">
-            <p className="text-neutral-500 text-center text-sm md:text-lg lg:text-xl">
+          <div className="grid grid-cols-1 place-items-center lg:place-items-start gap-4 md:max-w-[55ch] lg:max-w-[75ch]">
+            <p className="text-center lg:text-start text-sm md:text-lg text-neutral-500">
               Bhaargav Finco is a finance and loan company based in Ludhiana,
               Punjab. This company is involved in providing various financial
               services, including personal loans, business loans, home loans,

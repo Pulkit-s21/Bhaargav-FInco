@@ -10,7 +10,7 @@ export const Certificates = ({
   fileName,
 }) => {
   return (
-    <section className="mt-16 grid grid-cols-1  place-items-center lg:place-items-start px-8">
+    <section className="mt-16 grid grid-cols-1  place-items-center lg:place-items-start px-8 lg:px-24">
       {/* left Div */}
       <div className="grid grid-cols-1 place-items-center md:place-items-start gap-4 font-Vietnam">
         <p className="text-base md:text-xl lg:text-2xl text-primary-purple capitalize font-semibold">

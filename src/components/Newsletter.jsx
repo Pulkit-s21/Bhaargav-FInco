@@ -1,8 +1,8 @@
 export const Newsletter = () => {
   return (
     <section className="grid grid-cols-1">
-      <div className="grid grid-cols-1 gap-4 font-Vietnam px-8 place-items-center lg:place-items-start">
-        <p className="text-xl md:text-2xl lg:text-3xl text-primary-purple uppercase font-bold">
+      <div className="grid grid-cols-1 gap-4 font-Vietnam px-8 lg:px-32 place-items-center lg:place-items-start">
+        <p className="text-lg text-primary-purple uppercase font-bold">
           newsletter
         </p>
         <div className="grid grid-cols-1 gap-2 place-items-center lg:place-items-start text-center md:text-start lg:grid-cols-2">
@@ -11,7 +11,7 @@ export const Newsletter = () => {
           </p>
 
           <div className="grid grid-cols-1 md:max-w-[55ch] lg:max-w-[75ch]">
-            <p className="text-neutral-500 text-center lg:text-start lg:text-xl">
+            <p className="text-neutral-500 text-center lg:text-start lg:text-lg">
               Have questions or want to connect further? We would love to hear
               from you! Reply to this email or Join our newslatter for more.
             </p>
@@ -21,7 +21,7 @@ export const Newsletter = () => {
 
       {/* sign up div */}
       <div
-        className="grid grid-cols-1 gap-2 p-8 mt-12"
+        className="grid grid-cols-1 gap-2 p-8 lg:px-32 mt-12"
         style={{ background: "rgba(246,238,255,1)" }}
       >
         <p className="text-xl md:text-2xl lg:text-3xl font-Poppins font-semibold text-primary-purple">

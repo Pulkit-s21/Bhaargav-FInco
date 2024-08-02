@@ -4,7 +4,7 @@ import { Link } from "react-router-dom"
 export const FAQ = ({ num, service, src, mobileDetail, detail, link }) => {
   return (
     <div
-      className="border-dividers-lightGray grid grid-cols-1 gap-6 relative overflow-hidden rounded-lg text-left lg:max-w-5xl shadow-md shadow-primary-purple"
+      className="border-dividers-lightGray grid grid-cols-1 gap-4 relative overflow-hidden rounded-lg text-left lg:max-w-5xl shadow-md shadow-primary-purple"
       style={{ background: "rgba(150,71,255,.1)" }}
     >
       <input
@@ -14,16 +14,16 @@ export const FAQ = ({ num, service, src, mobileDetail, detail, link }) => {
       absolute
       top-0
       inset-x-0
-      h-12
+      h-16
       cursor-pointer
       opacity-0
       "
         type="checkbox"
       />
       {/* service */}
-      <div className="transition-all duration-500 px-4 py-1">
-        <h3 className="max-w-[25ch] md:max-w-[40ch] md:text-lg lg:max-w-[50ch] lg:text-xl font-Vietnam font-bold capitalize">
-          {num}. {service}
+      <div className="flex transition-all duration-500 px-4 pt-2">
+        <h3 className="flex max-w-[25ch] md:max-w-[40ch] md:text-lg lg:max-w-[50ch] lg:text-xl font-Vietnam font-bold capitalize">
+          {num}. <span className="">{service}</span>
         </h3>
       </div>
       {/* arrow */}
@@ -45,7 +45,7 @@ export const FAQ = ({ num, service, src, mobileDetail, detail, link }) => {
       </div>
       {/* detail */}
       <div
-        className=" 
+        className="
       overflow-hidden
       transition-all 
       duration-700

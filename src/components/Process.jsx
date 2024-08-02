@@ -4,7 +4,7 @@ import { Steps } from "./Steps"
 export const Process = () => {
   return (
     <section
-      className="hidden lg:grid grid-cols-1 place-items-center gap-4 py-6"
+      className="hidden lg:grid grid-cols-1 place-items-center gap-6 py-16"
       style={{ background: "rgba(47,47,47,.91)" }}
     >
       <p className="uppercase font-bold font-Vietnam lg:text-2xl text-white">

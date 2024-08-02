@@ -62,7 +62,7 @@ export const PageHeader = ({ src }) => {
         alt="Service Hero Image"
       />
 
-      <div className="absolute flex items-center bg-white -bottom-2 left-1/2 -translate-x-1/2 rounded-md pl-2 w-fit md:w-96">
+      <div className="absolute flex items-center bg-white bottom-4 left-1/2 -translate-x-1/2 rounded-md pl-2 w-fit md:w-96">
         <SearchIcon fontSize="medium" />
         <select
           className="flex-1 px-8 py-2 bg-white rounded-md text-md md:text-lg lg:text-xl text-neutral-600 w-56 font-Sora"

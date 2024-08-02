@@ -8,8 +8,14 @@ import { Testimonials } from "../components/Testimonials"
 import { ReviewUs } from "../components/ReviewUs"
 import { Newsletter } from "../components/Newsletter"
 import { ContactUs } from "../components/ContactUs"
+import { useLayoutEffect } from "react"
+import { useLocation } from "react-router-dom"
 
 export const Home = () => {
+  const { pathname } = useLocation()
+  useLayoutEffect(() => {
+    window.scrollTo(0, 0)
+  }, [pathname])
   return (
     <div className="grid grid-cols-1 gap-10">
       <Information />

@@ -6,6 +6,8 @@ import google from "../assets/images/google.png"
 import justDial from "../assets/images/justDial.png"
 import fbCode from "../assets/images/fbCode.png"
 import gCode from "../assets/images/googleCode.png"
+import igCode from "../assets/images/igCode.png"
+import jdCode from "../assets/images/jdCode.png"
 import logo from "../assets/images/BF_logo.png"
 import { Link } from "react-router-dom"
 import { ReviewUs } from "../components/ReviewUs"
@@ -22,7 +24,7 @@ export const ReviewPage = () => {
     {
       src: instagram,
       title: "Instagram",
-      //   code: fbCode,
+      code: igCode,
     },
     {
       src: google,
@@ -32,7 +34,7 @@ export const ReviewPage = () => {
     {
       src: justDial,
       title: "Just Dial",
-      //   code: fbCode,
+      code: jdCode,
     },
   ]
 
@@ -45,7 +47,7 @@ export const ReviewPage = () => {
           alt="AboutPage Hero Image"
         />
 
-        <div className="absolute flex justify-center bg-white font-Sora -bottom-2 left-1/2 -translate-x-1/2 rounded-md py-2 px-2 lg:px-4 w-fit md:w-96 text-sm lg:text-2xl">
+        <div className="absolute shadow-md shadow-primary-purple flex justify-center bg-white font-Sora -bottom-2 left-1/2 -translate-x-1/2 rounded-md py-2 px-2 lg:px-4 w-fit md:w-96 text-sm lg:text-2xl">
           <p>
             Review
             <span className="text-primary-purple uppercase font-bold"> Us</span>
@@ -55,9 +57,9 @@ export const ReviewPage = () => {
 
       <ReviewUs />
 
-      <div className="grid grid-cols-1 gap-6 place-items-center lg:place-items-start lg:grid-cols-2 px-8">
-        <div className="flex flex-col items-center lg:items-start font-Vietnam  gap-4">
-          <p className="uppercase text-primary-purple font-bold text-xl">
+      <div className="grid grid-cols-1 gap-6 place-items-center lg:place-items-start lg:grid-cols-2 px-8 lg:px-32">
+        <div className="flex flex-col items-center lg:items-start font-Vietnam gap-4">
+          <p className="uppercase text-primary-purple font-bold text-lg">
             Google Reviews
           </p>
           <p className="font-semibold text-3xl">Scan to review</p>
@@ -68,9 +70,9 @@ export const ReviewPage = () => {
         </div>
       </div>
 
-      <div className="grid grid-cols-1 gap-6 place-items-center lg:place-items-start lg:grid-cols-2 px-8">
+      <div className="grid grid-cols-1 gap-6 place-items-center lg:place-items-start lg:grid-cols-2 px-8 lg:px-32">
         <div className="flex flex-col items-center lg:items-start font-Vietnam  gap-4">
-          <p className="uppercase text-primary-purple font-bold text-xl">
+          <p className="uppercase text-primary-purple font-bold text-lg">
             Social links
           </p>
           <p className="font-semibold text-3xl text-center lg:text-start lg:max-w-[20ch]">
