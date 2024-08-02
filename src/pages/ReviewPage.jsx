@@ -42,6 +42,7 @@ export const ReviewPage = () => {
     <section className="grid grid-cols-1 gap-12">
       <div className="relative lg:px-6">
         <img
+          loading="lazy"
           className="h-[15rem] md:h-[25rem] lg:h-[40rem] w-full"
           src={ReviewHero}
           alt="AboutPage Hero Image"
@@ -66,7 +67,7 @@ export const ReviewPage = () => {
         </div>
 
         <div className="flex-1 w-fit text-center">
-          <img className="w-80" src={QRCode} alt="QR Code" />
+          <img loading="lazy" className="w-80" src={QRCode} alt="QR Code" />
         </div>
       </div>
 
@@ -83,7 +84,7 @@ export const ReviewPage = () => {
         <div id="socialDiv" className="grid grid-cols-1 gap-4 p-2">
           <div className="grid place-items-center">
             <Link to={"/"}>
-              <img className="w-10 lg:w-14" src={logo} alt="Bhaargav Finco" />
+              <img loading="lazy" className="w-10 lg:w-14" src={logo} alt="Bhaargav Finco" />
             </Link>
           </div>
 
@@ -94,6 +95,7 @@ export const ReviewPage = () => {
                 className="grid grid-cols-3 place-items-center gap-12"
               >
                 <img
+                  loading="lazy"
                   className="w-10 lg:w-14"
                   src={social.src}
                   alt={social.title}
@@ -105,6 +107,7 @@ export const ReviewPage = () => {
                   </p>
                 </div>
                 <img
+                  loading="lazy"
                   className="border-2 border-primary-purple w-24"
                   src={social.code}
                   alt={`${social.title} QR Code`}

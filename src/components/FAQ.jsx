@@ -60,6 +60,7 @@ export const FAQ = ({ num, service, src, mobileDetail, detail, link }) => {
       "
       >
         <img
+        loading="lazy"
           className="h-52 lg:h-full w-full md:w-80"
           src={src}
           alt="Image 1"

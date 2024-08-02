@@ -5,7 +5,7 @@ export const KeyFeatures = ({ title, desc }) => {
   return (
     <div className="flex flex-row gap-6 w-fit px-6 py-4 rounded-lg bg-primary-featureBox shadow-md shadow-primary-featureShadow">
       <div className="flex flex-col justify-center">
-        <img src={tick} alt="Requirements" />
+        <img loading="lazy" src={tick} alt="Requirements" />
       </div>
       <div className="grid grid-cols-1 font-Sora">
         <p className="font-semibold lg:text-xl">{title}</p>

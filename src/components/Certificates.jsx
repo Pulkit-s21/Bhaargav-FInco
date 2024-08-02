@@ -50,7 +50,7 @@ export const Certificates = ({
             </p>
 
             <div className="grid grid-cols-1 gap-4">
-              <img src={src} alt="Documents Image" />
+              <img src={src} loading="lazy" alt="Documents Image" />
               <div className="flex flex-col lg:flex-row gap-4 lg:gap-12">
                 <button className="bg-primary-downloadBtn border-2 border-transparent hover:border-primary-downloadBtn hover:bg-white hover:text-primary-downloadBtn transition-all text-white font-Sora font-bold py-2 px-4 rounded-md">
                   <a href={fileUrl} target="_blank" rel="noopener noreferrer">

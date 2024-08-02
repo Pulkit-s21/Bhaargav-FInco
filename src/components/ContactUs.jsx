@@ -218,7 +218,7 @@ export const ContactUs = () => {
 
       {/* map */}
       <div className="relative mt-12">
-        <img className="w-full lg:h-[35rem]" src={map} alt="Address" />
+        <img loading="lazy" className="w-full lg:h-[35rem]" src={map} alt="Address" />
 
         <div className="absolute top-24 md:top-44 lg:top-40 lg:-bottom-24 font-Sora left-[50%] -translate-x-[50%] rounded-md p-4 bg-white grid xl:grid-cols-2 gap-4 w-80 md:w-96 lg:w-fit">
           {/* left div */}
@@ -256,7 +256,7 @@ export const ContactUs = () => {
                     href="https://www.facebook.com/profile.php?id=61557643652727"
                     target="_blank"
                   >
-                    <img src={Facebook} alt="Facebook" />
+                    <img loading="lazy" src={Facebook} alt="Facebook" />
                   </a>
                 </Tooltip>
                 <Tooltip title="Instagram" arrow>
@@ -265,7 +265,7 @@ export const ContactUs = () => {
                     href="https://www.instagram.com/bhaargav.finco/"
                     target="_blank"
                   >
-                    <img src={Instagram} alt="Instagram" />
+                    <img loading="lazy" src={Instagram} alt="Instagram" />
                   </a>
                 </Tooltip>
                 <Tooltip title="Google" arrow>
@@ -274,7 +274,7 @@ export const ContactUs = () => {
                     href="https://www.google.com/search?q=bhaargav+finco&sca_esv=0ba29d23b081b3ca&sca_upv=1&authuser=1&sxsrf=ADLYWIKti40ZSNLBcjckrK3Mek71ezNxGg%3A1717586957745&source=hp&ei=DUxgZsO5K6Gy2roP1LC58AE&iflsig=AL9hbdgAAAAAZmBaHcuH74eHOSHz_qQr2DBGwqFWKNYz&oq=bhaa&gs_lp=Egdnd3Mtd2l6IgRiaGFhKgIIADIEECMYJzIQEAAYgAQYsQMYQxiDARiKBTIQEAAYgAQYsQMYQxiDARiKBTIFEC4YgAQyBRAuGIAEMg0QLhiABBixAxhDGIoFMgoQLhiABBhDGIoFMhAQLhiABBjRAxhDGMcBGIoFMhAQABiABBixAxhDGIMBGIoFMgUQLhiABEi8HlAAWLcEcAB4AJABAJgBowGgAfQEqgEDMC40uAEByAEA-AEBmAIEoAKoBcICERAuGIAEGJECGNEDGMcBGIoFwgIOEAAYgAQYsQMYgwEYigXCAgsQABiABBixAxiDAcICBBAAGAPCAggQLhiABBixA8ICCxAuGIAEGLEDGIMBmAMAkgcDMC40oAfyOw&sclient=gws-wiz"
                     target="_blank"
                   >
-                    <img src={Google} alt="Google" />
+                    <img loading="lazy" src={Google} alt="Google" />
                   </a>
                 </Tooltip>
                 <Tooltip title="Just Dial" arrow>
@@ -283,7 +283,7 @@ export const ContactUs = () => {
                     href="https://www.justdial.com/jd-business?source=77&wap=77&docid=0161PX161.X161.240331072327.W3D9"
                     target="_blank"
                   >
-                    <img src={JD} alt="Just Dial" />
+                    <img loading="lazy" src={JD} alt="Just Dial" />
                   </a>
                 </Tooltip>
               </div>
@@ -291,7 +291,7 @@ export const ContactUs = () => {
               <div>
                 <Tooltip title="Forward" arrow>
                   <a className="h-fit" href="/" target="_blank">
-                    <img src={Forward} alt="Forward" />
+                    <img loading="lazy" src={Forward} alt="Forward" />
                   </a>
                 </Tooltip>
               </div>

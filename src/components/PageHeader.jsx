@@ -57,6 +57,7 @@ export const PageHeader = ({ src }) => {
   return (
     <section className="relative lg:px-6">
       <img
+        loading="lazy"
         className="h-[15rem] md:h-[25rem] lg:h-[40rem] w-full"
         src={src}
         alt="Service Hero Image"

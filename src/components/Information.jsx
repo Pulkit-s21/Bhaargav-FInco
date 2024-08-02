@@ -59,9 +59,9 @@ export const Information = () => {
 
       {/* grid look */}
       <div className="hidden lg:grid grid-cols-2 grid-rows-2 place-items-end">
-        <img className="row-span-2 h-[30rem]" src={img_2} alt="Image 2" />
-        <img className="row-span-1 place-self-start h-[15rem]" src={img_1} alt="Image 1" />
-        <img className="h-[15rem]" src={img_3} alt="Image 3" />
+        <img loading="lazy" className="row-span-2 h-[30rem]" src={img_2} alt="Image 2" />
+        <img loading="lazy" className="row-span-1 place-self-start h-[15rem]" src={img_1} alt="Image 1" />
+        <img loading="lazy" className="h-[15rem]" src={img_3} alt="Image 3" />
       </div>
     </section>
   )

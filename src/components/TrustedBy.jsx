@@ -26,7 +26,7 @@ export const TrustedBy = () => {
         {trustedBanks.map((bank, idx) => {
           return (
             <Tooltip key={idx} title={bank.name} arrow>
-              <img className="lg:w-20 xl:w-24" src={bank.src} alt={bank.name} />
+              <img loading="lazy" className="lg:w-20 xl:w-24" src={bank.src} alt={bank.name} />
             </Tooltip>
           )
         })}

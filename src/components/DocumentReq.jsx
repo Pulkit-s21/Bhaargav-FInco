@@ -6,7 +6,7 @@ export const DocumentReq = ({ title, desc, desc2 }) => {
     <section className="grid grid-cols-1 place-items-center gap-4 p-4">
       <div className="flex flex-row gap-6 p-6 rounded-lg w-full max-w-7xl bg-primary-featureBox shadow-md shadow-primary-featureShadow">
         <div className="flex flex-col justify-center">
-          <img src={check} alt="Requirements" />
+          <img loading="lazy" src={check} alt="Requirements" />
         </div>
         <div className="grid grid-cols-1 font-Sora">
           <p className="font-semibold md:text-xl lg:text-2xl">{title}</p>
