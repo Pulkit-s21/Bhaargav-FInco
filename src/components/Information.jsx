@@ -23,9 +23,9 @@ export const Information = () => {
     return () => clearInterval(interval)
   }, [texts])
   return (
-    <section className="grid grid-cols-1 lg:grid-cols-2 mt-12 lg:mt-28 px-8 lg:px-24">
+    <section className="grid grid-cols-1 gap-4 lg:grid-cols-2 mt-12 lg:mt-28 px-8 lg:px-24">
       {/* Text Div */}
-      <div className="grid grid-cols-1 place-items-center lg:place-items-start">
+      <div className="grid grid-cols-1 gap-4 place-items-center lg:place-items-start">
         <h2 className="font-Vietnam font-bold text-center lg:text-start text-3xl md:text-4xl lg:text-6xl max-w-[20ch] capitalize tracking-wider lg:tracking-widest">
           Secure your <span className="lg:block">financial</span> future{" "}
           <span className="text-4xl text-primary-purple slide-out">{feature}</span>
