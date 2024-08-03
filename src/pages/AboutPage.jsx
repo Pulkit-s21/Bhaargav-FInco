@@ -17,7 +17,7 @@ export const AboutPage = () => {
   useLayoutEffect(() => {
     window.scrollTo(0, 0)
   }, [pathname])
-
+  
   const docsList = [
     {
       title: "Trademark Registration of Bhaargav Finco",
@@ -85,7 +85,7 @@ export const AboutPage = () => {
         </div>
       </div>
 
-      <section className="mt-16 grid grid-cols-1  place-items-center lg:place-items-start px-8 lg:px-24">
+      <section className="mt-10 grid grid-cols-1 place-items-center lg:place-items-start px-8 lg:px-24">
         {/* left Div */}
         <div className="grid grid-cols-1 place-items-center md:place-items-start gap-4 font-Vietnam">
           <p className="text-lg text-primary-purple uppercase font-bold">
@@ -119,6 +119,7 @@ export const AboutPage = () => {
 
       <div className="lg:px-6">
         <img
+          loading="lazy"
           className="h-[10rem] md:h-[25rem] lg:h-[40rem] w-full"
           src={AboutPage2}
           alt="About Page Image"

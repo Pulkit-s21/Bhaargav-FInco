@@ -27,7 +27,7 @@ export const FAQ = ({ num, service, src, mobileDetail, detail, link }) => {
         </h3>
       </div>
       {/* arrow */}
-      <div className="absolute rotate-0 peer-checked:rotate-180 transition-all duration-500 top-2 right-3 text-primary-softRed">
+      <div className="absolute rotate-0 peer-checked:rotate-180 transition-all duration-500 top-2 lg:top-3 right-3 text-primary-softRed">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           fill="none"
@@ -60,6 +60,7 @@ export const FAQ = ({ num, service, src, mobileDetail, detail, link }) => {
       "
       >
         <img
+          loading="lazy"
           className="h-52 lg:h-full w-full md:w-80"
           src={src}
           alt="Image 1"

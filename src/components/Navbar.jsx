@@ -44,7 +44,7 @@ export const Navbar = () => {
           {/* Icon and title Div */}
           <div className="flex items-center gap-2">
             <Link to={"/"}>
-              <img className="w-10 lg:w-14" src={logo} alt="Bhaargav Finco" />
+              <img loading="lazy" className="w-10 lg:w-14" src={logo} alt="Bhaargav Finco" />
             </Link>
           </div>
           {/* Menu Icons */}

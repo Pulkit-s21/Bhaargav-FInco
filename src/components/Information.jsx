@@ -28,10 +28,10 @@ export const Information = () => {
       <div className="grid grid-cols-1 gap-4 place-items-center lg:place-items-start">
         <h2 className="font-Vietnam font-bold text-center lg:text-start text-3xl md:text-4xl lg:text-6xl max-w-[20ch] capitalize tracking-wider lg:tracking-widest">
           Secure your <span className="lg:block">financial</span> future{" "}
-          <span className="text-4xl text-primary-purple slide-out">{feature}</span>
+          <span className="text-primary-purple">{feature}</span>
         </h2>
         <img className="lg:hidden" src={MobileHero} alt="Mobile Image" />
-        <p className="text-neutral-500 text-sm md:text-lg font-Sora md:max-w-[50ch] lg:max-w-[40ch] text-center lg:text-start">
+        <p className="text-neutral-500 text-sm md:text-lg lg:text-xl font-Sora md:max-w-[50ch] lg:max-w-[35ch] text-center lg:text-start">
           Bhaargav Finco is a finance and loan company based in Ludhiana, Punjab
           involved in providing various financial services, including personal
           loans, business loans, home loans, gold loans, and other financial
@@ -59,9 +59,19 @@ export const Information = () => {
 
       {/* grid look */}
       <div className="hidden lg:grid grid-cols-2 grid-rows-2 place-items-end">
-        <img className="row-span-2 h-[30rem]" src={img_2} alt="Image 2" />
-        <img className="row-span-1 place-self-start h-[15rem]" src={img_1} alt="Image 1" />
-        <img className="h-[15rem]" src={img_3} alt="Image 3" />
+        <img
+          loading="lazy"
+          className="row-span-2 h-[30rem]"
+          src={img_2}
+          alt="Image 2"
+        />
+        <img
+          loading="lazy"
+          className="row-span-1 place-self-start h-[15rem]"
+          src={img_1}
+          alt="Image 1"
+        />
+        <img loading="lazy" className="h-[15rem]" src={img_3} alt="Image 3" />
       </div>
     </section>
   )

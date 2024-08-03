@@ -50,7 +50,7 @@ export const Footer = () => {
         <div className="grid grid-cols-1 gap-4">
           <div className="flex flex-col items-center gap-2">
             <Link to={"/"}>
-              <img className="w-24 lg:w-36" src={logo} alt="Bhaargav Finco" />
+              <img loading="lazy" className="w-24 lg:w-36" src={logo} alt="Bhaargav Finco" />
             </Link>
           </div>
 
@@ -62,7 +62,7 @@ export const Footer = () => {
                   href="https://www.justdial.com/jd-business?source=77&wap=77&docid=0161PX161.X161.240331072327.W3D9"
                   target="_blank"
                 >
-                  <img src={JD} alt="Just Dial" />
+                  <img loading="lazy" src={JD} alt="Just Dial" />
                 </a>
               </Tooltip>
               <Tooltip title="Instagram" arrow>
@@ -70,7 +70,7 @@ export const Footer = () => {
                   href="https://www.instagram.com/bhaargav.finco/"
                   target="_blank"
                 >
-                  <img src={Instagram} alt="Instagram" />
+                  <img loading="lazy" src={Instagram} alt="Instagram" />
                 </a>
               </Tooltip>
               <Tooltip title="Facebook" arrow>
@@ -78,7 +78,7 @@ export const Footer = () => {
                   href="https://www.facebook.com/profile.php?id=61557643652727"
                   target="_blank"
                 >
-                  <img src={Facebook} alt="Facebook" />
+                  <img loading="lazy" src={Facebook} alt="Facebook" />
                 </a>
               </Tooltip>
               <Tooltip title="Google" arrow>
@@ -86,7 +86,7 @@ export const Footer = () => {
                   href="https://www.google.com/search?q=bhaargav+finco&sca_esv=0ba29d23b081b3ca&sca_upv=1&authuser=1&sxsrf=ADLYWIKti40ZSNLBcjckrK3Mek71ezNxGg%3A1717586957745&source=hp&ei=DUxgZsO5K6Gy2roP1LC58AE&iflsig=AL9hbdgAAAAAZmBaHcuH74eHOSHz_qQr2DBGwqFWKNYz&oq=bhaa&gs_lp=Egdnd3Mtd2l6IgRiaGFhKgIIADIEECMYJzIQEAAYgAQYsQMYQxiDARiKBTIQEAAYgAQYsQMYQxiDARiKBTIFEC4YgAQyBRAuGIAEMg0QLhiABBixAxhDGIoFMgoQLhiABBhDGIoFMhAQLhiABBjRAxhDGMcBGIoFMhAQABiABBixAxhDGIMBGIoFMgUQLhiABEi8HlAAWLcEcAB4AJABAJgBowGgAfQEqgEDMC40uAEByAEA-AEBmAIEoAKoBcICERAuGIAEGJECGNEDGMcBGIoFwgIOEAAYgAQYsQMYgwEYigXCAgsQABiABBixAxiDAcICBBAAGAPCAggQLhiABBixA8ICCxAuGIAEGLEDGIMBmAMAkgcDMC40oAfyOw&sclient=gws-wiz"
                   target="_blank"
                 >
-                  <img src={Google} alt="Google" />
+                  <img loading="lazy" src={Google} alt="Google" />
                 </a>
               </Tooltip>
             </div>
