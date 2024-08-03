@@ -4,15 +4,20 @@ import Trademark from "../assets/images/Trademark.png"
 import MoneyLender from "../assets/images/MoneyLender.png"
 import FirmReg from "../assets/images/FirmReg.png"
 import UdyamReg from "../assets/images/UdyamReg.png"
+import UdyamCert from "../assets/certificates/Udyam.pdf"
+import TradeCert from "../assets/certificates/Trade.pdf"
+import FirmCert from "../assets/certificates/Firm.pdf"
+import MoneyCert from "../assets/certificates/Money.pdf"
 import { Certificates } from "../components/Certificates"
 import { useLayoutEffect } from "react"
-import { Link } from "react-router-dom"
+import { Link, useLocation } from "react-router-dom"
 
 export const AboutPage = () => {
+  const { pathname } = useLocation()
   useLayoutEffect(() => {
     window.scrollTo(0, 0)
-  })
-  // need to add the files in the project folder and add path to the fileUrl for download
+  }, [pathname])
+
   const docsList = [
     {
       title: "Trademark Registration of Bhaargav Finco",
@@ -22,7 +27,7 @@ export const AboutPage = () => {
         "The primary purpose of trademark registration is to safeguard our brand identity and ensure our clients can easily recognize and trust our services. Here's why we registered our trademark: Brand Protection, Preventing Misuse, Market Presence.",
       document: "Here is the document for trademark Registration of the firm :",
       src: Trademark,
-      fileUrl: "",
+      fileUrl: TradeCert,
       fileName: "Trademark Certificate",
     },
     {
@@ -33,7 +38,7 @@ export const AboutPage = () => {
         "The primary purpose of obtaining a money lender license is to ensure that Bhaargav Finco operates within the legal framework and maintains high standards of integrity and trust. Here's why we obtained this license as Legal compliance and consumer protection.",
       document: "Here is the document for trademark Registration of the firm :",
       src: MoneyLender,
-      fileUrl: "",
+      fileUrl: MoneyCert,
       fileName: "Money Lender Certificate",
     },
     {
@@ -44,7 +49,7 @@ export const AboutPage = () => {
         "The primary purpose of firm registration is to formalize our business operations and establish a legal identity. Here's why we registered Bhaargav Finco as Legal Recognition, Operational Legitimacy, Trust and Credibility, Business Opportunities, Protection and Rights.",
       document: "Here is the document for trademark Registration of the firm :",
       src: FirmReg,
-      fileUrl: "",
+      fileUrl: FirmCert,
       fileName: "Registration Certificate",
     },
     {
@@ -55,7 +60,7 @@ export const AboutPage = () => {
         "The primary purpose of obtaining Udyam Registration is to avail the benefits provided by the government for MSMEs and to formalize our status as a recognized enterprise. Here's why we registered Bhaargav Finco under the Udyam scheme as market access and financial support.",
       document: "Here is the document for trademark Registration of the firm :",
       src: UdyamReg,
-      fileUrl: "",
+      fileUrl: UdyamCert,
       fileName: "Udyam Registration Certificate",
     },
   ]
@@ -64,12 +69,13 @@ export const AboutPage = () => {
     <section className="grid grid-cols-1 gap-6 py-4">
       <div className="relative lg:px-6">
         <img
+          loading="lazy"
           className="h-[15rem] md:h-[25rem] lg:h-[40rem] w-full"
           src={AboutHero}
           alt="AboutPage Hero Image"
         />
 
-        <div className="absolute flex justify-center bg-white font-Sora -bottom-2 left-1/2 -translate-x-1/2 rounded-md py-2 px-2 lg:px-4 w-fit md:w-96 text-xs lg:text-2xl">
+        <div className="absolute shadow-md shadow-primary-purple flex justify-center bg-white font-Sora -bottom-2 left-1/2 -translate-x-1/2 rounded-md py-2 px-2 lg:px-4 w-fit md:w-96 text-xs lg:text-2xl">
           <p>
             Get to Know{" "}
             <span className="text-primary-purple uppercase font-bold">
@@ -79,10 +85,10 @@ export const AboutPage = () => {
         </div>
       </div>
 
-      <section className="mt-16 grid grid-cols-1  place-items-center lg:place-items-start px-8">
+      <section className="mt-16 grid grid-cols-1  place-items-center lg:place-items-start px-8 lg:px-24">
         {/* left Div */}
         <div className="grid grid-cols-1 place-items-center md:place-items-start gap-4 font-Vietnam">
-          <p className="text-2xl lg:text-3xl text-primary-purple uppercase font-bold">
+          <p className="text-lg text-primary-purple uppercase font-bold">
             about us
           </p>
           <div className="grid grid-cols-1 lg:grid-cols-2">
@@ -120,10 +126,10 @@ export const AboutPage = () => {
       </div>
 
       <div className="grid grid-cols-1 gap-4">
-        <section className="mt-16 grid grid-cols-1  place-items-center lg:place-items-start px-8">
+        <section className="mt-16 grid grid-cols-1  place-items-center lg:place-items-start px-8 lg:px-24">
           {/* left Div */}
           <div className="grid grid-cols-1 place-items-center md:place-items-start gap-4 font-Vietnam">
-            <p className="text-xl md:text-2xl lg:text-3xl text-primary-purple uppercase font-bold">
+            <p className="text-xl md:text-2xl text-primary-purple uppercase font-bold">
               our mission
             </p>
             <div className="grid grid-cols-1 gap-2 lg:grid-cols-2">
@@ -144,10 +150,10 @@ export const AboutPage = () => {
           </div>
         </section>
 
-        <section className="mt-16 grid grid-cols-1  place-items-center lg:place-items-start px-8">
+        <section className="mt-16 grid grid-cols-1  place-items-center lg:place-items-start px-8 lg:px-24">
           {/* left Div */}
           <div className="grid grid-cols-1 place-items-center md:place-items-start gap-4 font-Vietnam">
-            <p className="text-xl md:text-2xl lg:text-3xl text-primary-purple uppercase font-bold">
+            <p className="text-xl md:text-2xl text-primary-purple uppercase font-bold">
               our vision
             </p>
             <div className="grid grid-cols-1 gap-2 lg:grid-cols-2">
@@ -168,10 +174,10 @@ export const AboutPage = () => {
           </div>
         </section>
 
-        <section className="mt-16 grid grid-cols-1  place-items-center lg:place-items-start px-8">
+        <section className="mt-16 grid grid-cols-1  place-items-center lg:place-items-start px-8 lg:px-24">
           {/* left Div */}
           <div className="grid grid-cols-1 place-items-center md:place-items-start gap-4 font-Vietnam">
-            <p className="text-xl md:text-2xl lg:text-3xl text-primary-purple uppercase font-bold">
+            <p className="text-xl md:text-2xl text-primary-purple uppercase font-bold">
               our approach
             </p>
             <div className="grid grid-cols-1 gap-2 lg:grid-cols-2">
@@ -193,10 +199,10 @@ export const AboutPage = () => {
           </div>
         </section>
 
-        <section className="mt-16 grid grid-cols-1  place-items-center lg:place-items-start px-8">
+        <section className="mt-16 grid grid-cols-1  place-items-center lg:place-items-start px-8 lg:px-24">
           {/* left Div */}
           <div className="grid grid-cols-1 place-items-center md:place-items-start gap-4 font-Vietnam">
-            <p className="text-xl md:text-2xl lg:text-3xl text-primary-purple uppercase font-bold">
+            <p className="text-xl md:text-2xl text-primary-purple uppercase font-bold">
               our credentials
             </p>
             <div className="grid grid-cols-1 gap-2 lg:grid-cols-2">

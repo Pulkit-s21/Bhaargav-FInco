@@ -3,9 +3,9 @@ import { data } from "../helpers/data"
 
 export const Services = () => {
   return (
-    <section className="mt-16 grid grid-cols-1 px-8">
+    <section className="mt-16 grid grid-cols-1 px-8 lg:px-24">
       <div className="grid grid-cols-1 gap-4 place-items-center lg:place-items-start font-Vietnam">
-        <p className="text-xl md:text-2xl lg:text-3xl text-primary-purple uppercase font-bold">
+        <p className="text-xl md:text-2xl text-primary-purple uppercase font-bold">
           services
         </p>
         <div className="grid grid-cols-1 lg:grid-cols-2">
@@ -14,7 +14,7 @@ export const Services = () => {
           </p>
 
           <div className="grid grid-cols-1 md:max-w-[55ch] lg:max-w-[75ch]">
-            <p className="text-center text-sm md:text-lg text-neutral-500 lg:text-xl">
+            <p className="text-center lg:text-start text-sm md:text-lg text-neutral-500">
               Bhaargav Finco provide a range of lodetail, including vehicle
               lodetail, SME lodetail, and housing finance. This company is
               involved in providing various financial services, including
@@ -44,7 +44,7 @@ export const Services = () => {
 
       {/* benefits */}
       <div className="grid grid-cols-1 gap-4 font-Vietnam place-items-center lg:place-items-start ">
-        <p className="text-xl md:text-2xl lg:text-3xl text-primary-purple uppercase font-bold">
+        <p className="text-xl md:text-2xl text-primary-purple uppercase font-bold">
           benefits and features
         </p>
         <div className="grid grid-cols-1 lg:grid-cols-2">
@@ -53,7 +53,7 @@ export const Services = () => {
           </p>
 
           <div className="grid grid-cols-1 md:max-w-[55ch] lg:max-w-[75ch]">
-            <p className="text-center text-neutral-500 text-sm md:text-lg lg:text-xl">
+            <p className="text-center lg:text-start text-neutral-500 text-sm md:text-lg">
               As a Ludhiana-based company, Bhaargav Finco likely has a deep
               understanding of the local market, including specific economic
               conditions and customer needs. This local expertise can be

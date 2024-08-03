@@ -15,12 +15,8 @@ import Swal from "sweetalert2"
 import { useState } from "react"
 import { Details } from "./Details"
 import { Link } from "react-router-dom"
-import { useLayoutEffect } from "react"
 
 export const ContactUs = () => {
-  useLayoutEffect(() => {
-    window.scrollTo(0, 0)
-  })
   const [errors, setErrors] = useState({})
   const [formData, setFormData] = useState({
     first_name: "",
@@ -66,7 +62,7 @@ export const ContactUs = () => {
     }
 
     const { first_name, last_name, email, phone_number, message } = formData
-    const ownerNumber = +919872459519
+    const ownerNumber = +917087080786
 
     const whatsappMessage = `
       Hello, my name is *${first_name} ${last_name}*.\nMy email is: ${email}\nMy phone number is: ${phone_number}\n*Message:* ${message}
@@ -178,8 +174,8 @@ export const ContactUs = () => {
   const details = [
     {
       src: call,
-      detail: "+91 9888444547",
-      href: "tel:+919888444547",
+      detail: "+91 7087080786",
+      href: "tel:+917087080786",
     },
     {
       src: printer,
@@ -201,8 +197,8 @@ export const ContactUs = () => {
 
   return (
     <section className="h-[80rem] lg:h-[65rem]">
-      <div className="grid grid-cols-1 gap-4 place-items-center lg:place-items-start text-center font-Vietnam px-8">
-        <p className="text-xl md:text-2xl lg:text-3xl text-primary-purple uppercase font-bold">
+      <div className="grid grid-cols-1 gap-4 place-items-center lg:place-items-start text-center font-Vietnam px-8 lg:px-32">
+        <p className="text-lg text-primary-purple uppercase font-bold">
           contact us
         </p>
         <div className="grid grid-cols-1 gap-2 lg:text-start lg:grid-cols-2">
@@ -255,22 +251,38 @@ export const ContactUs = () => {
             <div className="flex gap-6 justify-between">
               <div className="flex gap-6">
                 <Tooltip title="Facebook" arrow>
-                  <a className="h-fit" href="/" target="_blank">
+                  <a
+                    className="h-fit"
+                    href="https://www.facebook.com/profile.php?id=61557643652727"
+                    target="_blank"
+                  >
                     <img src={Facebook} alt="Facebook" />
                   </a>
                 </Tooltip>
                 <Tooltip title="Instagram" arrow>
-                  <a className="h-fit" href="/" target="_blank">
+                  <a
+                    className="h-fit"
+                    href="https://www.instagram.com/bhaargav.finco/"
+                    target="_blank"
+                  >
                     <img src={Instagram} alt="Instagram" />
                   </a>
                 </Tooltip>
                 <Tooltip title="Google" arrow>
-                  <a className="h-fit" href="/" target="_blank">
+                  <a
+                    className="h-fit"
+                    href="https://www.google.com/search?q=bhaargav+finco&sca_esv=0ba29d23b081b3ca&sca_upv=1&authuser=1&sxsrf=ADLYWIKti40ZSNLBcjckrK3Mek71ezNxGg%3A1717586957745&source=hp&ei=DUxgZsO5K6Gy2roP1LC58AE&iflsig=AL9hbdgAAAAAZmBaHcuH74eHOSHz_qQr2DBGwqFWKNYz&oq=bhaa&gs_lp=Egdnd3Mtd2l6IgRiaGFhKgIIADIEECMYJzIQEAAYgAQYsQMYQxiDARiKBTIQEAAYgAQYsQMYQxiDARiKBTIFEC4YgAQyBRAuGIAEMg0QLhiABBixAxhDGIoFMgoQLhiABBhDGIoFMhAQLhiABBjRAxhDGMcBGIoFMhAQABiABBixAxhDGIMBGIoFMgUQLhiABEi8HlAAWLcEcAB4AJABAJgBowGgAfQEqgEDMC40uAEByAEA-AEBmAIEoAKoBcICERAuGIAEGJECGNEDGMcBGIoFwgIOEAAYgAQYsQMYgwEYigXCAgsQABiABBixAxiDAcICBBAAGAPCAggQLhiABBixA8ICCxAuGIAEGLEDGIMBmAMAkgcDMC40oAfyOw&sclient=gws-wiz"
+                    target="_blank"
+                  >
                     <img src={Google} alt="Google" />
                   </a>
                 </Tooltip>
                 <Tooltip title="Just Dial" arrow>
-                  <a className="h-fit" href="/" target="_blank">
+                  <a
+                    className="h-fit"
+                    href="https://www.justdial.com/jd-business?source=77&wap=77&docid=0161PX161.X161.240331072327.W3D9"
+                    target="_blank"
+                  >
                     <img src={JD} alt="Just Dial" />
                   </a>
                 </Tooltip>
@@ -300,6 +312,7 @@ export const ContactUs = () => {
                   type="text"
                   id="first_name"
                   name="first_name"
+                  autoComplete="off"
                   value={formData.first_name}
                   onChange={handleChange}
                   placeholder="First Name"
@@ -320,6 +333,7 @@ export const ContactUs = () => {
                   type="text"
                   id="last_name"
                   name="last_name"
+                  autoComplete="off"
                   value={formData.last_name}
                   onChange={handleChange}
                   placeholder="Last Name"
@@ -343,12 +357,12 @@ export const ContactUs = () => {
                   type="email"
                   id="email"
                   name="email"
+                  autoComplete="off"
+                  required
                   value={formData.email}
                   onChange={handleChange}
                   placeholder="Email Address"
                   className="border-b-2 text-sm border-neutral-400 outline-none"
-                  required
-                  autoComplete="off"
                 />
                 {errors.email && (
                   <p className="text-red-500 text-sm mt-1">{errors.email}</p>
@@ -363,6 +377,7 @@ export const ContactUs = () => {
                   value={formData.phone_number}
                   onChange={handleChange}
                   id="phone_number"
+                  autoComplete="off"
                   type="tel"
                   name="phone_number"
                   placeholder="+91 1234567890"
