@@ -29,18 +29,18 @@ export const Testimonials = () => {
       </div>
 
       <Swiper
-        slidesPerView={2}
-        spaceBetween={0}
+        slidesPerView={3}
+        spaceBetween={-40}
         loop={true}
-        pagination={{ clickable: true }}
+        pagination={{ clickable: false }}
         navigation={true}
         modules={[Pagination, Navigation]}
-        className="mt-10 hidden lg:block pb-12"
+        className="mt-10 hidden lg:block pb-6"
         style={{ width: "90vw" }}
       >
         {testimonialData.map((data, idx) => {
           return (
-            <SwiperSlide className="px-20" key={idx}>
+            <SwiperSlide className="px-12" key={idx}>
               <TestimonialCard
                 review={data.review}
                 user={data.user}

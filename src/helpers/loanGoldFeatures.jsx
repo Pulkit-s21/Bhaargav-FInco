@@ -1,7 +1,7 @@
 export const loanGoldFeatures = [
   {
     title: "Secured Loan",
-    desc: "Gold assets are used as collateral.",
+    desc: "Gold assets are used as collateral for securing the loan.",
   },
   {
     title: "Loan Amount",

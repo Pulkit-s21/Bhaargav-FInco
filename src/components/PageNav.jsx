@@ -58,18 +58,20 @@ export const PageNav = ({ pageInfo, pageFeatures, pageDocs }) => {
       {/* information div */}
       {pageInfo.map((data, idx) => {
         return (
-          <PageInformation key={idx} title={data.title} detail={data.detail} />
+          <PageInformation
+            key={idx}
+            title={data.title}
+            detail={data.detail}
+            className={data.className}
+          />
         )
       })}
 
       {/* key features */}
-      <section
-        id="features"
-        className="grid grid-cols-1 gap-6 place-items-center"
-      >
+      <section id="features" className="grid grid-cols-1 place-items-center">
         <div className="grid grid-cols-1 lg:grid-cols-2 w-full">
-          <div className="flex items-start justify-center">
-            <p className="capitalize text-primary-blueish font-semibold text-lg  md:text-2xl lg:text-3xl">
+          <div className="flex items-start justify-center lg:pr-[10rem]">
+            <p className="capitalize text-primary-blueish font-semibold text-lg md:text-xl lg:text-3xl">
               Key Features
             </p>
           </div>
@@ -77,7 +79,7 @@ export const PageNav = ({ pageInfo, pageFeatures, pageDocs }) => {
           <></>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 p-4 place-items-center w-full">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 p-4 lg:py-4 lg:px-40 place-items-center w-full">
           {pageFeatures.map((feature, idx) => {
             return (
               <KeyFeatures
@@ -93,7 +95,7 @@ export const PageNav = ({ pageInfo, pageFeatures, pageDocs }) => {
       {/* docs required */}
       <section id="docs">
         <div className="grid grid-cols-1 lg:grid-cols-2 w-full">
-          <div className="flex items-start justify-center">
+          <div className="flex items-start justify-center lg:pr-[2rem]">
             <p className="capitalize text-primary-blueish font-semibold text-lg md:text-xl lg:text-3xl">
               Documents Required
             </p>

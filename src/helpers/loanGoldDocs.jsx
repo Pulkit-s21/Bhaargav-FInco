@@ -1,6 +1,6 @@
 export const loanGoldDocs = [
   {
-    title: "Identity Proof    ",
+    title: "Identity Proof",
     desc: "Passport, Voter ID, Aadhaar Card, Driving License, PAN Card.",
   },
   {

@@ -1,8 +1,8 @@
 /* eslint-disable react/prop-types */
-export const PageInformation = ({ title, detail }) => {
+export const PageInformation = ({ title, detail, className }) => {
   return (
     <div id="all" className="grid grid-cols-1 gap-4 lg:grid-cols-2">
-      <div className="flex items-start justify-center">
+      <div className={`flex items-start justify-center ${className}`}>
         <p className="uppercase text-primary-purple font-semibold md:text-2xl text-lg lg:text-3xl lg:max-w-[25ch]">
           {title}
         </p>

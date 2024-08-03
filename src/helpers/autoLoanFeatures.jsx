@@ -14,7 +14,7 @@ export const autoLoanFeatures = [
   },
   {
     title: "Repayment Tenure",
-    desc: "Flexible terms ranging from 1 to 7 years.",
+    desc: "Flexible terms ranging from 1 to 7 years for the loan.",
   },
   {
     title: "Downpayment",

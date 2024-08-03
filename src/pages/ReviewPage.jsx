@@ -43,7 +43,7 @@ export const ReviewPage = () => {
       <div className="relative lg:px-6">
         <img
           loading="lazy"
-          className="h-[15rem] md:h-[25rem] lg:h-[40rem] w-full"
+          className="h-[15rem] md:h-[25rem] lg:h-[30rem] w-full"
           src={ReviewHero}
           alt="AboutPage Hero Image"
         />

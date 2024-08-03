@@ -50,7 +50,12 @@ export const Footer = () => {
         <div className="grid grid-cols-1 gap-4">
           <div className="flex flex-col items-center gap-2">
             <Link to={"/"}>
-              <img loading="lazy" className="w-24 lg:w-36" src={logo} alt="Bhaargav Finco" />
+              <img
+                loading="lazy"
+                className="w-24 lg:w-36"
+                src={logo}
+                alt="Bhaargav Finco"
+              />
             </Link>
           </div>
 
@@ -94,38 +99,56 @@ export const Footer = () => {
         </div>
 
         {/* middle div */}
-        <div className="grid grid-cols-1  place-items-center gap-4 font-Sora">
+        <div className="grid grid-cols-1 place-items-center gap-4 font-Sora">
           <p className="capitalize text-white font-semibold">our services</p>
-          <div className="flex flex-row gap-6 text-white">
-            <ul className="grid grid-cols-1 gap-1">
+          <div className="flex flex-row gap-8 text-white">
+            <ul className="grid grid-cols-1 gap-2">
               <Link to={"/real_estate"}>
-                <li>Real Estate Finance</li>
+                <li className="whitespace-nowrap text-xs lg:text-sm">
+                  Real Estate Finance
+                </li>
               </Link>
               <Link to={"/loan_property"}>
-                <li>Loan against Property</li>
+                <li className="whitespace-nowrap text-xs lg:text-sm">
+                  Loan against Property
+                </li>
               </Link>
               <Link to={"/micro_fund"}>
-                <li>Micro Funding</li>
+                <li className="whitespace-nowrap text-xs lg:text-sm">
+                  Micro Funding
+                </li>
               </Link>
               <Link to={"/loan_gold"}>
-                <li>Loan against Gold</li>
+                <li className="whitespace-nowrap text-xs lg:text-sm">
+                  Loan against Gold
+                </li>
               </Link>
               <Link to={"/home_loan"}>
-                <li>Home Loan</li>
+                <li className="whitespace-nowrap text-xs lg:text-sm">
+                  Home Loan
+                </li>
               </Link>
             </ul>
-            <ul className="grid grid-cols-1 gap-1">
+            <ul className="grid grid-cols-1 gap-2">
               <Link to={"/pvt_loan"}>
-                <li>Private loans</li>
+                <li className="whitespace-nowrap text-xs lg:text-sm">
+                  Private loans
+                </li>
               </Link>
               <Link to={"/auto_loan"}>
-                <li>Auto Loans</li>
+                <li className="whitespace-nowrap text-xs lg:text-sm">
+                  Auto Loans
+                </li>
               </Link>
               <Link to={"/funds"}>
-                <li>Funds Showing</li>
+                <li className="whitespace-nowrap text-xs lg:text-sm">
+                  Funds Showing
+                </li>
               </Link>
               <Link to={"/edu_loan"}>
-                <li>Education Loan</li>
+                <li className="whitespace-nowrap text-xs lg:text-sm">
+                  Education Loan
+                </li>
               </Link>
             </ul>
           </div>

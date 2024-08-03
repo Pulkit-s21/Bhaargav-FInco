@@ -196,7 +196,7 @@ export const ContactUs = () => {
   ]
 
   return (
-    <section className="h-[80rem] lg:h-[65rem]">
+    <section className="h-[80rem] lg:h-[65rem] xl:h-[55rem]">
       <div className="grid grid-cols-1 gap-4 place-items-center lg:place-items-start text-center font-Vietnam px-8 lg:px-32">
         <p className="text-lg text-primary-purple uppercase font-bold">
           contact us
@@ -218,7 +218,12 @@ export const ContactUs = () => {
 
       {/* map */}
       <div className="relative mt-12">
-        <img loading="lazy" className="w-full lg:h-[35rem]" src={map} alt="Address" />
+        <img
+          loading="lazy"
+          className="w-full lg:h-[35rem]"
+          src={map}
+          alt="Address"
+        />
 
         <div className="absolute top-24 md:top-44 lg:top-40 lg:-bottom-24 font-Sora left-[50%] -translate-x-[50%] rounded-md p-4 bg-white grid xl:grid-cols-2 gap-4 w-80 md:w-96 lg:w-fit">
           {/* left div */}

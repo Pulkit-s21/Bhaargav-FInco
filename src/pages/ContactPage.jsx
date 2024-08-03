@@ -7,7 +7,7 @@ export const ContactPage = () => {
       <div className="lg:px-12">
         <img
           loading="lazy"
-          className="h-[15rem] md:h-[25rem] lg:h-[40rem] w-full"
+          className="h-[15rem] md:h-[25rem] lg:h-[30rem] w-full"
           src={ContactHero}
           alt="Contact Us Image"
         />

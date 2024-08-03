@@ -4,7 +4,7 @@ import { Link } from "react-router-dom"
 export const FAQ = ({ num, service, src, mobileDetail, detail, link }) => {
   return (
     <div
-      className="border-dividers-lightGray grid grid-cols-1 gap-4 relative overflow-hidden rounded-lg text-left lg:max-w-5xl shadow-md shadow-primary-purple"
+      className="border-dividers-lightGray grid grid-cols-1 gap-2 relative overflow-hidden rounded-lg text-left lg:max-w-5xl shadow-md shadow-primary-purple"
       style={{ background: "rgba(150,71,255,.1)" }}
     >
       <input
@@ -21,13 +21,13 @@ export const FAQ = ({ num, service, src, mobileDetail, detail, link }) => {
         type="checkbox"
       />
       {/* service */}
-      <div className="flex transition-all duration-500 px-4 pt-2">
+      <div className="flex items-center transition-all duration-500 px-4 pt-3">
         <h3 className="flex max-w-[25ch] md:max-w-[40ch] md:text-lg lg:max-w-[50ch] lg:text-xl font-Vietnam font-bold capitalize">
           {num}. <span className="">{service}</span>
         </h3>
       </div>
       {/* arrow */}
-      <div className="absolute rotate-0 peer-checked:rotate-180 transition-all duration-500 top-2 lg:top-3 right-3 text-primary-softRed">
+      <div className="absolute rotate-0 peer-checked:rotate-180 transition-all duration-500 top-3 right-3 text-primary-softRed">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           fill="none"

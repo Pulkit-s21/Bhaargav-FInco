@@ -5,7 +5,7 @@ export const homeLoanFeatures = [
   },
   {
     title: "Interest Rate",
-    desc: "Fixed or floating interest rates available.",
+    desc: "Fixed or floating interest rates available for the loan.",
   },
   {
     title: "Loan Amount",
