@@ -13,10 +13,6 @@ export const PageHeader = ({ src }) => {
 
   const services = [
     {
-      link: "",
-      service: "Search our services",
-    },
-    {
       link: "/real_estate",
       service: "Real Estate Finance",
     },
@@ -66,18 +62,17 @@ export const PageHeader = ({ src }) => {
       <div className="absolute flex items-center bg-white bottom-4 left-1/2 -translate-x-1/2 rounded-md px-4 w-fit md:w-96">
         <SearchIcon fontSize="medium" />
         <select
-          className="flex-1 px-8 py-2 bg-white rounded-md text-md md:text-lg lg:text-xl text-neutral-600 w-56 font-Sora"
+          className="flex-1 px-8 py-2 bg-white font-semibold rounded-md text-md md:text-lg lg:text-xl text-neutral-600 w-56 font-Sora"
           name="Services"
           id="Services"
           onChange={handleChange}
         >
+          <option selected disabled>
+            Select a service
+          </option>
           {services.map((service, idx) => {
             return (
-              <option
-                style={{ paddingBlock: "2rem" }}
-                key={idx}
-                value={service.link}
-              >
+              <option key={idx} value={service.link}>
                 {service.service}
               </option>
             )

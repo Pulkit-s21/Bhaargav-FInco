@@ -372,7 +372,7 @@ export const Booking = () => {
         </div>
 
         <div className="grid grid-cols-1 gap-2 lg:max-w-96">
-          <label>Date and Time</label>
+          <label>Date and Time <span className="text-red-500">*</span></label>
           <input
             className="px-4 bg-white border-2 rounded-md py-2"
             type="datetime-local"
@@ -387,7 +387,7 @@ export const Booking = () => {
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
           <div className="grid grid-cols-1 gap-2 lg:max-w-96">
-            <label>First Name</label>
+            <label>First Name <span className="text-red-500">*</span></label>
             <input
               className="px-4 bg-white border-2 rounded-md py-2"
               type="text"
@@ -401,7 +401,7 @@ export const Booking = () => {
             )}
           </div>
           <div className="grid grid-cols-1 gap-2 lg:max-w-96">
-            <label>Last Name</label>
+            <label>Last Name <span className="text-red-500">*</span></label>
             <input
               className="px-4 bg-white border-2 rounded-md py-2"
               type="text"
@@ -418,7 +418,7 @@ export const Booking = () => {
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
           <div className="grid grid-cols-1 gap-2 lg:max-w-96">
-            <label>Date of Birth</label>
+            <label>Date of Birth <span className="text-red-500">*</span></label>
             <input
               className="px-4 bg-white border-2 rounded-md py-2"
               type="date"
@@ -429,7 +429,7 @@ export const Booking = () => {
             {errors.dob && <p style={{ color: "red" }}>{errors.dob}</p>}
           </div>
           <div className="grid grid-cols-1 gap-2 lg:max-w-96">
-            <label>Mobile Number</label>
+            <label>Mobile Number <span className="text-red-500">*</span></label>
             <input
               className="px-4 bg-white border-2 rounded-md py-2"
               type="text"
@@ -444,7 +444,7 @@ export const Booking = () => {
 
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-4">
           <div className="grid grid-cols-1 gap-2 lg:max-w-96">
-            <label>Aadhar Number</label>
+            <label>Aadhar Number <span className="text-red-500">*</span></label>
             <input
               className="px-4 bg-white border-2 rounded-md py-2"
               type="text"
@@ -457,7 +457,7 @@ export const Booking = () => {
             {errors.aadhar && <p style={{ color: "red" }}>{errors.aadhar}</p>}
           </div>
           <div className="grid grid-cols-1 gap-2 lg:max-w-96">
-            <label>PAN Card</label>
+            <label>PAN Card <span className="text-red-500">*</span></label>
             <input
               className="px-4 bg-white border-2 rounded-md py-2"
               type="text"
@@ -470,7 +470,7 @@ export const Booking = () => {
             {errors.pan && <p style={{ color: "red" }}>{errors.pan}</p>}
           </div>
           <div className="grid grid-cols-1 gap-2 lg:max-w-96">
-            <label>PIN Code</label>
+            <label>PIN Code <span className="text-red-500">*</span></label>
             <input
               className="px-4 bg-white border-2 rounded-md py-2"
               type="text"
@@ -485,7 +485,7 @@ export const Booking = () => {
         </div>
 
         <div className="grid grid-cols-1 gap-2 lg:max-w-96">
-          <label>Address</label>
+          <label>Address <span className="text-red-500">*</span></label>
           <textarea
             className="px-4 bg-white border-2 rounded-md py-2 lg:w-[61rem]"
             name="address"

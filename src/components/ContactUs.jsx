@@ -311,7 +311,7 @@ export const ContactUs = () => {
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
               <div className="grid grid-cols-1 gap-2">
                 <label className="text-xs" htmlFor="first_name">
-                  First Name
+                  First Name <span className="text-red-500">*</span>
                 </label>
                 <input
                   type="text"
@@ -332,7 +332,7 @@ export const ContactUs = () => {
               </div>
               <div className="grid grid-cols-1 gap-2">
                 <label className="text-xs" htmlFor="last_name">
-                  Last Name
+                  Last Name <span className="text-red-500">*</span>
                 </label>
                 <input
                   type="text"
@@ -356,7 +356,7 @@ export const ContactUs = () => {
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
               <div className="grid grid-cols-1 gap-2">
                 <label className="text-xs" htmlFor="email">
-                  Email
+                  Email <span className="text-red-500">*</span>
                 </label>
                 <input
                   type="email"
@@ -375,7 +375,7 @@ export const ContactUs = () => {
               </div>
               <div className="grid grid-cols-1 gap-2">
                 <label className="text-xs" htmlFor="phone_number">
-                  Phone Number
+                  Phone Number <span className="text-red-500">*</span>
                 </label>
                 <input
                   required
@@ -399,7 +399,7 @@ export const ContactUs = () => {
             <div className="grid grid-cols-1 gap-4">
               <div className="grid grid-cols-1 gap-2">
                 <label className="text-xs" htmlFor="message">
-                  Message
+                  Message <span className="text-red-500">*</span>
                 </label>
                 <textarea
                   required
@@ -420,7 +420,7 @@ export const ContactUs = () => {
 
             {/* buttons */}
             {/* see if the appointment btn can move to page top when clicked */}
-            <div className="grid grid-cols-1 lg:grid-cols-2 place-items-center gap-4">
+            <div className="flex flex-col-reverse lg:grid lg:grid-cols-2 place-items-center gap-4">
               <button className="text-sm font-Sora font-semibold md:text-md text-white bg-neutral-800 capitalize rounded-lg py-1 px-2 border-2 border-transparent hover:bg-white hover:text-neutral-800 transition-all hover:border-neutral-800">
                 <Link to={"/appointment"}>book appointment</Link>
               </button>
