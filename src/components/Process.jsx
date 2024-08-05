@@ -10,7 +10,7 @@ export const Process = () => {
       <p className="uppercase font-bold font-Vietnam lg:text-2xl text-white">
         steps
       </p>
-      <p className="font-Vietnam font-extrabold lg:text-5xl text-white">
+      <p className="font-Vietnam font-extrabold lg:text-3xl text-white">
         How our process works?
       </p>
 

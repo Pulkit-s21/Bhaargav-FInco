@@ -1,13 +1,16 @@
 /* eslint-disable react/prop-types */
+import { useState } from "react"
 import { Link } from "react-router-dom"
 
 export const FAQ = ({ num, service, src, mobileDetail, detail, link }) => {
+  const [clicked, setClicked] = useState(false)
   return (
     <div
       className="border-dividers-lightGray grid grid-cols-1 gap-2 relative overflow-hidden rounded-lg text-left lg:max-w-5xl shadow-md shadow-primary-purple"
-      style={{ background: "rgba(150,71,255,.1)" }}
+      style={{ background: "rgba(150,71,255,.05)" }}
     >
       <input
+        onClick={() => setClicked(!clicked)}
         className="
       peer
       w-full
@@ -22,7 +25,11 @@ export const FAQ = ({ num, service, src, mobileDetail, detail, link }) => {
       />
       {/* service */}
       <div className="flex items-center transition-all duration-500 px-4 pt-3">
-        <h3 className="flex max-w-[25ch] md:max-w-[40ch] md:text-lg lg:max-w-[50ch] lg:text-xl font-Vietnam font-bold capitalize">
+        <h3
+          className={`flex max-w-[25ch] md:max-w-[40ch] md:text-lg lg:max-w-[50ch] lg:text-xl font-Vietnam capitalize ${
+            clicked ? "font-bold" : "font-normal"
+          }`}
+        >
           {num}. <span className="">{service}</span>
         </h3>
       </div>
@@ -51,28 +58,28 @@ export const FAQ = ({ num, service, src, mobileDetail, detail, link }) => {
       duration-700
       max-h-0 
       peer-checked:max-h-96
-      grid 
-      grid-cols-1
-      md:grid-cols-2
+      flex flex-col md:flex-row
       gap-2
       md:px-8
       text-center
+      md:text-start
+      place-items-center
       "
       >
         <img
           loading="lazy"
-          className="h-52 lg:h-full w-full md:w-80"
+          className="h-52 lg:h-64 w-96 md:w-80"
           src={src}
           alt="Image 1"
         />
-        <div className="grid grid-cols-1 gap-2">
+        <div className="grid grid-cols-1 gap-2 ">
           <p className="uppercase lg:text-2xl font-Vietnam font-semibold">
             {service}
           </p>
-          <p className="lg:hidden font-Sora text-neutral-500 text-xs">
+          <p className="md:hidden font-Sora text-neutral-500 text-xs">
             {mobileDetail}
           </p>
-          <p className="hidden md:block font-Sora font-semibold text-neutral-500">
+          <p className="hidden md:block font-Sora font-semibold text-neutral-500 md:max-w-[40ch]">
             {detail}
           </p>
           <Link to={link} className="py-2">

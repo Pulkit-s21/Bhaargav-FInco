@@ -1,22 +1,21 @@
 /* eslint-disable no-unused-vars */
 /* eslint-disable no-undef */
-import map from "../assets/images/map.png"
 import call from "../assets/svg/call.svg"
-import printer from "../assets/svg/printer.svg"
 import email from "../assets/svg/email.svg"
 import location from "../assets/svg/location.svg"
 import JD from "../assets/svg/JD.svg"
 import Google from "../assets/svg/Google.svg"
 import Facebook from "../assets/svg/Facebook.svg"
 import Instagram from "../assets/svg/Instagram.svg"
-import Forward from "../assets/svg/Forward.svg"
 import Tooltip from "@mui/material/Tooltip"
 import Swal from "sweetalert2"
 import { useState } from "react"
 import { Details } from "./Details"
 import { Link } from "react-router-dom"
+import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet"
 
 export const ContactUs = () => {
+  const position = [30.901857723911192, 75.77620197371607] // location of company
   const [errors, setErrors] = useState({})
   const [formData, setFormData] = useState({
     first_name: "",
@@ -93,7 +92,7 @@ export const ContactUs = () => {
               Your message is stored with us. Our team will contact you soon.
             </p>
             <div class="flex justify-center gap-6">
-              <a class="text-blue-300 hover:text-blue-500 transition-all" href="/services">Explore your services</a>
+              <a class="text-blue-300 hover:text-blue-500 transition-all" href="/services">Explore our services</a>
               <a class="text-blue-300 hover:text-blue-500 transition-all" href="/">HomePage</a>
             </div>
           </div>
@@ -178,11 +177,6 @@ export const ContactUs = () => {
       href: "tel:+917087080786",
     },
     {
-      src: printer,
-      detail: "+91 7087080786",
-      href: "tel:+917087080786",
-    },
-    {
       src: email,
       detail: "bhaargavfinco@gmail.com",
       href: "mailto:bhaargavfinco@gmail.com",
@@ -217,15 +211,29 @@ export const ContactUs = () => {
       </div>
 
       {/* map */}
-      <div className="relative mt-12">
-        <img
-          loading="lazy"
-          className="w-full lg:h-[35rem]"
-          src={map}
-          alt="Address"
-        />
+      <div className="relative mt-12 overflow-hidden">
+        <MapContainer
+          style={{ width: "100vw", height: "35rem" }}
+          center={[30.894168104748598, 75.77556360854487]}
+          zoom={15}
+          scrollWheelZoom={false}
+        >
+          <TileLayer
+            attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+            url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+          />
+          <Marker position={position}>
+            <Popup>
+              Bhaargav Finco. <br /> 271, Sukhmani enclave, South city, Canal
+              Road, Ludhiana 141012
+            </Popup>
+          </Marker>
+        </MapContainer>
 
-        <div className="absolute top-24 md:top-44 lg:top-40 lg:-bottom-24 font-Sora left-[50%] -translate-x-[50%] rounded-md p-4 bg-white grid xl:grid-cols-2 gap-4 w-80 md:w-96 lg:w-fit">
+        <div
+          className="absolute top-24 md:top-44 lg:top-40 lg:-bottom-24 font-Sora left-[50%] -translate-x-[50%] rounded-md p-4 bg-white grid xl:grid-cols-2 gap-4 w-80 md:w-96 lg:w-fit"
+          style={{ zIndex: 12000 }} // to make the form visible on top of the leaflet map
+        >
           {/* left div */}
           <div className="grid grid-cols-1 gap-10 bg-neutral-800 rounded-md px-4 py-6">
             <div className="grid grid-cols-1 place-items-center lg:place-items-start gap-2">
@@ -254,7 +262,7 @@ export const ContactUs = () => {
 
             {/* socials */}
             <div className="flex gap-6 justify-between">
-              <div className="flex gap-6">
+              <div className="flex gap-8">
                 <Tooltip title="Facebook" arrow>
                   <a
                     className="h-fit"
@@ -284,14 +292,6 @@ export const ContactUs = () => {
                   </a>
                 </Tooltip>
               </div>
-
-              <div>
-                <Tooltip title="Forward" arrow>
-                  <a className="h-fit" href="/" target="_blank">
-                    <img loading="lazy" src={Forward} alt="Forward" />
-                  </a>
-                </Tooltip>
-              </div>
             </div>
           </div>
 
@@ -302,7 +302,7 @@ export const ContactUs = () => {
           >
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
               <div className="grid grid-cols-1 gap-2">
-                <label className="text-sm" htmlFor="first_name">
+                <label className="text-xs" htmlFor="first_name">
                   First Name
                 </label>
                 <input
@@ -323,7 +323,7 @@ export const ContactUs = () => {
                 )}
               </div>
               <div className="grid grid-cols-1 gap-2">
-                <label className="text-sm" htmlFor="last_name">
+                <label className="text-xs" htmlFor="last_name">
                   Last Name
                 </label>
                 <input
@@ -347,7 +347,7 @@ export const ContactUs = () => {
 
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
               <div className="grid grid-cols-1 gap-2">
-                <label className="text-sm" htmlFor="email">
+                <label className="text-xs" htmlFor="email">
                   Email
                 </label>
                 <input
@@ -366,7 +366,7 @@ export const ContactUs = () => {
                 )}
               </div>
               <div className="grid grid-cols-1 gap-2">
-                <label className="text-sm" htmlFor="phone_number">
+                <label className="text-xs" htmlFor="phone_number">
                   Phone Number
                 </label>
                 <input
@@ -390,7 +390,7 @@ export const ContactUs = () => {
 
             <div className="grid grid-cols-1 gap-4">
               <div className="grid grid-cols-1 gap-2">
-                <label className="text-sm" htmlFor="message">
+                <label className="text-xs" htmlFor="message">
                   Message
                 </label>
                 <textarea

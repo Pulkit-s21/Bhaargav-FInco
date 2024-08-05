@@ -15,11 +15,11 @@ export const Services = () => {
 
           <div className="grid grid-cols-1 md:max-w-[55ch] lg:max-w-[75ch]">
             <p className="text-center lg:text-start text-sm md:text-lg text-neutral-500">
-              Bhaargav Finco provide a range of lodetail, including vehicle
-              lodetail, SME lodetail, and housing finance. This company is
-              involved in providing various financial services, including
-              personal lodetail, business lodetail, home lodetail, gold
-              lodetail, and other financial products.
+              Bhaargav Finco provide a range of loans, including vehicle loans,
+              SME loans, and housing finance. This company is involved in
+              providing various financial services, including personal loans,
+              business loans, home loans, gold loans, and other financial
+              products.
             </p>
           </div>
         </div>

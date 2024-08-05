@@ -348,7 +348,7 @@ export const Booking = () => {
         Book An Appointment
       </p>
 
-      <form className="grid grid-cols-1 gap-6 px-6">
+      <form className="grid grid-cols-1 gap-6 px-6 lg:pl-20">
         <div className="grid grid-cols-1 gap-2 lg:max-w-96">
           <label>
             Service <span className="text-red-500">*</span>
@@ -487,7 +487,7 @@ export const Booking = () => {
         <div className="grid grid-cols-1 gap-2 lg:max-w-96">
           <label>Address</label>
           <textarea
-            className="px-4 bg-white border-2 rounded-md py-2"
+            className="px-4 bg-white border-2 rounded-md py-2 lg:w-[61rem]"
             name="address"
             placeholder="Enter full address"
             value={formData.address}

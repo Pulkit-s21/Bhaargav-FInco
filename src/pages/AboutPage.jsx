@@ -66,7 +66,7 @@ export const AboutPage = () => {
   ]
 
   return (
-    <section className="grid grid-cols-1 gap-6 py-4">
+    <section className="grid grid-cols-1 gap-12 py-4">
       <div className="relative lg:px-6">
         <img
           loading="lazy"

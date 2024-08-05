@@ -7,7 +7,7 @@ import ServiceHero from "../assets/images/ServiceHero.jpg"
 
 export const ServicePage = () => {
   return (
-    <section className="grid grid-cols-1 gap-10">
+    <section className="grid grid-cols-1 gap-12">
       <PageHeader src={ServiceHero} />
 
       {/* services  */}

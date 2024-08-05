@@ -5,8 +5,9 @@ import { DocumentReq } from "./DocumentReq"
 import { Newsletter } from "./Newsletter"
 import { ContactUs } from "./ContactUs"
 import { Booking } from "./Booking"
-import DownloadingIcon from "@mui/icons-material/Downloading"
 import { PageInformation } from "./PageInformation"
+import jsPDF from "jspdf"
+import DownloadingIcon from "@mui/icons-material/Downloading"
 
 export const PageNav = ({ pageInfo, pageFeatures, pageDocs }) => {
   const navList = [
@@ -23,6 +24,23 @@ export const PageNav = ({ pageInfo, pageFeatures, pageDocs }) => {
       title: "Application Process",
     },
   ]
+
+  const generatePDF = () => {
+    const doc = new jsPDF()
+
+    doc.setFontSize(16)
+    doc.text("Required Documents", 20, 20)
+
+    pageDocs.forEach((document, index) => {
+      const yPosition = 30 + index * 15
+      doc.setFontSize(14)
+      doc.text(`${document.title}:`, 20, yPosition)
+      doc.setFontSize(12)
+      doc.text(document.desc, 20, yPosition + 5)
+    })
+
+    doc.save(`required_documents.pdf`)
+  }
   return (
     <section className="grid grid-cols-1 gap-12">
       <nav className="grid grid-cols-2 md:grid-cols-3 font-Vietnam font-semibold">
@@ -116,7 +134,10 @@ export const PageNav = ({ pageInfo, pageFeatures, pageDocs }) => {
         })}
 
         <div className="grid grid-cols-1 place-items-center md:place-items-end py-2 px-14 lg:px-24">
-          <button className="bg-primary-downloadBtn text-white font-Sora font-bold py-2 px-4 rounded-2xl">
+          <button
+            className="bg-primary-downloadBtn text-white font-Sora font-bold py-2 px-4 rounded-2xl"
+            onClick={generatePDF}
+          >
             {" "}
             <DownloadingIcon sx={{ color: "white" }} /> Document Format
           </button>

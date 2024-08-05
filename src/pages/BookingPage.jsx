@@ -11,7 +11,7 @@ export const BookingPage = () => {
     window.scrollTo(0, 0)
   }, [pathname])
   return (
-    <section className="grid grid-cols-1 gap-6">
+    <section className="grid grid-cols-1 gap-12">
       <div className="relative lg:px-6">
         <img
           loading="lazy"

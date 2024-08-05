@@ -4,8 +4,8 @@ import { estateInfo } from "../helpers/estateInfo"
 import { estateFeatures } from "../helpers/estateFeatures"
 import { estateDocs } from "../helpers/estateDocs"
 import { useLayoutEffect } from "react"
-import EstateHero from "../assets/images/EstateHero.png"
 import { useLocation } from "react-router-dom"
+import EstateHero from "../assets/images/EstateHero.png"
 
 export const RealEstate = () => {
   const { pathname } = useLocation()

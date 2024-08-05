@@ -4,7 +4,12 @@ import { Link } from "react-router-dom"
 export const ServicePageDiv = ({ src, service, mobileDetail, order, link }) => {
   return (
     <div className="flex flex-col lg:flex-row gap-8 lg:gap-44 p-4">
-      <img loading="lazy" className="rounded-2xl md:max-w-xl" src={src} alt="Service Image" />
+      <img
+        loading="lazy"
+        className="rounded-2xl md:max-w-xl"
+        src={src}
+        alt="Service Image"
+      />
       <div
         className={`flex flex-col gap-4 justify-start items-center text-center lg:text-start lg:items-start font-Vietnam ${order}`}
       >

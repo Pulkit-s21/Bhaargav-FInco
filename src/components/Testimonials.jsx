@@ -10,13 +10,13 @@ import "swiper/css/pagination"
 export const Testimonials = () => {
   return (
     <section className="grid grid-cols-1 gap-4 px-8 place-items-center">
-      <div className="grid grid-cols-1 gap-4 font-Vietnam place-items-center lg:place-items-start">
+      <div className="grid grid-cols-1 gap-4 font-Vietnam place-items-center lg:place-items-start md:pr-[4rem]">
         <p className="text-xl md:text-2xl text-primary-purple uppercase font-bold">
           Customer testimonials
         </p>
         <div className="grid grid-cols-1 lg:grid-cols-2">
           <p className="hidden lg:block text-black font-semibold lg:text-4xl lg:max-w-[17ch]">
-            What our Clients <span className="lg:block">say?</span>
+            What our Clients say?
           </p>
 
           <div className="text-center lg:text-start md:max-w-[55ch] lg:max-w-[75ch]">
@@ -35,7 +35,7 @@ export const Testimonials = () => {
         pagination={{ clickable: false }}
         navigation={true}
         modules={[Pagination, Navigation]}
-        className="mt-10 hidden lg:block pb-6"
+        className="mt-10 hidden lg:block pb-10"
         style={{ width: "90vw" }}
       >
         {testimonialData.map((data, idx) => {

@@ -33,12 +33,6 @@ export const Footer = () => {
       className: "text-primary-purple",
       href: "tel:+917087080786",
     },
-    {
-      src: printer,
-      detail: "+91 7087080786",
-      className: "text-primary-purple",
-      href: "tel:+917087080786",
-    },
   ]
 
   return (
@@ -102,54 +96,62 @@ export const Footer = () => {
         <div className="grid grid-cols-1 place-items-center gap-4 font-Sora">
           <p className="capitalize text-white font-semibold">our services</p>
           <div className="flex flex-row gap-8 text-white">
-            <ul className="grid grid-cols-1 gap-2">
-              <Link to={"/real_estate"}>
-                <li className="whitespace-nowrap text-xs lg:text-sm">
-                  Real Estate Finance
-                </li>
-              </Link>
-              <Link to={"/loan_property"}>
-                <li className="whitespace-nowrap text-xs lg:text-sm">
-                  Loan against Property
-                </li>
-              </Link>
-              <Link to={"/micro_fund"}>
-                <li className="whitespace-nowrap text-xs lg:text-sm">
-                  Micro Funding
-                </li>
-              </Link>
-              <Link to={"/loan_gold"}>
-                <li className="whitespace-nowrap text-xs lg:text-sm">
-                  Loan against Gold
-                </li>
-              </Link>
-              <Link to={"/home_loan"}>
-                <li className="whitespace-nowrap text-xs lg:text-sm">
-                  Home Loan
-                </li>
-              </Link>
-            </ul>
-            <ul className="grid grid-cols-1 gap-2">
-              <Link to={"/pvt_loan"}>
-                <li className="whitespace-nowrap text-xs lg:text-sm">
-                  Private loans
-                </li>
-              </Link>
-              <Link to={"/auto_loan"}>
-                <li className="whitespace-nowrap text-xs lg:text-sm">
-                  Auto Loans
-                </li>
-              </Link>
-              <Link to={"/funds"}>
-                <li className="whitespace-nowrap text-xs lg:text-sm">
-                  Funds Showing
-                </li>
-              </Link>
-              <Link to={"/edu_loan"}>
-                <li className="whitespace-nowrap text-xs lg:text-sm">
-                  Education Loan
-                </li>
-              </Link>
+            <ul className="grid grid-cols-1 gap-4">
+              <div className="grid md:grid-cols-1 lg:grid-cols-2 gap-4 place-items-center lg:place-items-start">
+                <Link to={"/real_estate"}>
+                  <li className="whitespace-nowrap text-xs">
+                    Real Estate Finance
+                  </li>
+                </Link>
+                <Link to={"/pvt_loan"}>
+                  <li className="whitespace-nowrap text-xs">
+                    Private loans
+                  </li>
+                </Link>
+              </div>
+              <div className="grid md:grid-cols-1 lg:grid-cols-2 gap-4 place-items-center lg:place-items-start">
+                <Link to={"/loan_property"}>
+                  <li className="whitespace-nowrap text-xs">
+                    Loan against Property
+                  </li>
+                </Link>
+                <Link to={"/auto_loan"}>
+                  <li className="whitespace-nowrap text-xs">
+                    Auto Loans
+                  </li>
+                </Link>
+              </div>
+              <div className="grid md:grid-cols-1 lg:grid-cols-2 gap-4 place-items-center lg:place-items-start">
+                <Link to={"/micro_fund"}>
+                  <li className="whitespace-nowrap text-xs">
+                    Micro Funding
+                  </li>
+                </Link>
+                <Link to={"/funds"}>
+                  <li className="whitespace-nowrap text-xs">
+                    Funds Showing
+                  </li>
+                </Link>
+              </div>
+              <div className="grid md:grid-cols-1 lg:grid-cols-2 gap-4 place-items-center lg:place-items-start">
+                <Link to={"/loan_gold"}>
+                  <li className="whitespace-nowrap text-xs">
+                    Loan against Gold
+                  </li>
+                </Link>
+                <Link to={"/edu_loan"}>
+                  <li className="whitespace-nowrap text-xs">
+                    Education Loan
+                  </li>
+                </Link>
+              </div>
+              <div className="grid md:grid-cols-1 lg:grid-cols-2 gap-4 place-items-center lg:place-items-start">
+                <Link to={"/home_loan"}>
+                  <li className="whitespace-nowrap text-xs">
+                    Home Loan
+                  </li>
+                </Link>
+              </div>
             </ul>
           </div>
         </div>
@@ -174,16 +176,16 @@ export const Footer = () => {
       <div className="grid grid-cols-1 gap-4">
         <hr />
 
-        <div className="flex flex-col gap-4 text-center lg:flex-row justify-between font-Sora text-white text-sm lg:text-base">
+        <div className="flex flex-col-reverse gap-4 text-center lg:flex-row justify-between font-Sora text-white text-sm lg:text-base">
           <p>{`Copyright ©${currentYear} All rights reserved`}</p>
           <p>
             Designed By{" "}
             <a
               className="underline font-semibold"
-              href="https://www.instagram.com/dgdesigns25/"
+              href="https://dgdesign.in/"
               target="_blank"
             >
-              DGDesigns25
+              DGDesigns
             </a>
           </p>
         </div>

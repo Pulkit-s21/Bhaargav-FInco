@@ -2,6 +2,7 @@ import { useEffect, useState } from "react"
 import img_1 from "../assets/images/img_1.png"
 import img_2 from "../assets/images/img_2.png"
 import img_3 from "../assets/images/img_3.png"
+import Info from "../assets/images/Info.png"
 import MobileHero from "../assets/images/MobileHero.png"
 import { Link } from "react-router-dom"
 
@@ -42,6 +43,10 @@ export const Information = () => {
         </button>
       </div>
 
+      <div className="hidden lg:flex lg:items-center">
+        <img src={Info} alt="Intro Image" />
+      </div>
+
       {/* Image Div */}
       {/* <div className="hidden lg:block relative">
         <img
@@ -58,7 +63,7 @@ export const Information = () => {
       </div> */}
 
       {/* grid look */}
-      <div className="hidden lg:grid grid-cols-2 grid-rows-2 place-items-end">
+      {/* <div className="hidden lg:grid grid-cols-2 grid-rows-2 place-items-end">
         <img
           loading="lazy"
           className="row-span-2 h-[30rem]"
@@ -72,7 +77,7 @@ export const Information = () => {
           alt="Image 1"
         />
         <img loading="lazy" className="h-[15rem]" src={img_3} alt="Image 3" />
-      </div>
+      </div> */}
     </section>
   )
 }

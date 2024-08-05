@@ -5,7 +5,7 @@ import instagram from "../assets/images/instagram.png"
 import google from "../assets/images/google.png"
 import justDial from "../assets/images/justDial.png"
 import fbCode from "../assets/images/fbCode.png"
-import gCode from "../assets/images/googleCode.png"
+import gCode from "../assets/images/gCode.png"
 import igCode from "../assets/images/igCode.png"
 import jdCode from "../assets/images/jdCode.png"
 import logo from "../assets/images/BF_logo.png"
@@ -59,11 +59,10 @@ export const ReviewPage = () => {
       <ReviewUs />
 
       <div className="grid grid-cols-1 gap-6 place-items-center lg:place-items-start lg:grid-cols-2 px-8 lg:px-32">
+        {/* no text as per client request */}
         <div className="flex flex-col items-center lg:items-start font-Vietnam gap-4">
-          <p className="uppercase text-primary-purple font-bold text-lg">
-            Google Reviews
-          </p>
-          <p className="font-semibold text-3xl">Scan to review</p>
+          <p className="uppercase text-primary-purple font-bold text-lg"></p>
+          <p className="font-semibold text-3xl"></p>
         </div>
 
         <div className="flex-1 w-fit text-center">
@@ -84,7 +83,12 @@ export const ReviewPage = () => {
         <div id="socialDiv" className="grid grid-cols-1 gap-4 p-2">
           <div className="grid place-items-center">
             <Link to={"/"}>
-              <img loading="lazy" className="w-10 lg:w-14" src={logo} alt="Bhaargav Finco" />
+              <img
+                loading="lazy"
+                className="w-10 lg:w-14"
+                src={logo}
+                alt="Bhaargav Finco"
+              />
             </Link>
           </div>
 
@@ -108,7 +112,7 @@ export const ReviewPage = () => {
                 </div>
                 <img
                   loading="lazy"
-                  className="border-2 border-primary-purple w-24"
+                  className="border-x-4 border-y-4 border-primary-purple w-24"
                   src={social.code}
                   alt={`${social.title} QR Code`}
                 />
