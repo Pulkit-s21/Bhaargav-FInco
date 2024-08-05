@@ -211,9 +211,9 @@ export const ContactUs = () => {
       </div>
 
       {/* map */}
-      <div className="relative mt-12 overflow-hidden">
+      <div className="relative mt-12">
         <MapContainer
-          style={{ width: "100vw", height: "35rem" }}
+          style={{ width: "99vw", height: "30rem" }}
           center={[30.894168104748598, 75.77556360854487]}
           zoom={15}
           scrollWheelZoom={false}
