@@ -282,12 +282,20 @@ export const ContactUs = () => {
                   </a>
                 </Tooltip>
                 <Tooltip title="Google" arrow>
-                  <a className="h-fit" href="/" target="_blank">
+                  <a
+                    className="h-fit"
+                    href="https://www.google.com/search?q=bhaargav+finco&sca_esv=0ba29d23b081b3ca&sca_upv=1&authuser=1&sxsrf=ADLYWIKti40ZSNLBcjckrK3Mek71ezNxGg%3A1717586957745&source=hp&ei=DUxgZsO5K6Gy2roP1LC58AE&iflsig=AL9hbdgAAAAAZmBaHcuH74eHOSHz_qQr2DBGwqFWKNYz&oq=bhaa&gs_lp=Egdnd3Mtd2l6IgRiaGFhKgIIADIEECMYJzIQEAAYgAQYsQMYQxiDARiKBTIQEAAYgAQYsQMYQxiDARiKBTIFEC4YgAQyBRAuGIAEMg0QLhiABBixAxhDGIoFMgoQLhiABBhDGIoFMhAQLhiABBjRAxhDGMcBGIoFMhAQABiABBixAxhDGIMBGIoFMgUQLhiABEi8HlAAWLcEcAB4AJABAJgBowGgAfQEqgEDMC40uAEByAEA-AEBmAIEoAKoBcICERAuGIAEGJECGNEDGMcBGIoFwgIOEAAYgAQYsQMYgwEYigXCAgsQABiABBixAxiDAcICBBAAGAPCAggQLhiABBixA8ICCxAuGIAEGLEDGIMBmAMAkgcDMC40oAfyOw&sclient=gws-wiz"
+                    target="_blank"
+                  >
                     <img src={Google} alt="Google" />
                   </a>
                 </Tooltip>
                 <Tooltip title="Just Dial" arrow>
-                  <a className="h-fit" href="/" target="_blank">
+                  <a
+                    className="h-fit"
+                    href="https://www.justdial.com/jd-business?source=77&wap=77&docid=0161PX161.X161.240331072327.W3D9"
+                    target="_blank"
+                  >
                     <img src={JD} alt="Just Dial" />
                   </a>
                 </Tooltip>
