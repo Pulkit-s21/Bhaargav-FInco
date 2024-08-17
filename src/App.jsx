@@ -24,59 +24,20 @@ function App() {
       <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route
-          path="/about"
-          element={<AboutPage />}
-        />
-        <Route
-          path="/services"
-          element={<ServicePage />}
-        />
-        <Route
-          path="/review"
-          element={<ReviewPage />}
-        />
-        <Route
-          path="/real_estate"
-          element={<RealEstate />}
-        />
-        <Route
-          path="/loan_property"
-          element={<LoanProperty />}
-        />
-        <Route
-          path="/loan_gold"
-          element={<LoanGold />}
-        />
-        <Route
-          path="/micro_fund"
-          element={<MicroFunding />}
-        />
-        <Route
-          path="/home_loan"
-          element={<HomeLoan />}
-        />
-        <Route
-          path="/pvt_loan"
-          element={<PvtLoan />}
-        />
-        <Route
-          path="/auto_loan"
-          element={<AutoLoan />}
-        />
+        <Route path="/about" element={<AboutPage />} />
+        <Route path="/services" element={<ServicePage />} />
+        <Route path="/review" element={<ReviewPage />} />
+        <Route path="/real_estate" element={<RealEstate />} />
+        <Route path="/loan_property" element={<LoanProperty />} />
+        <Route path="/loan_gold" element={<LoanGold />} />
+        <Route path="/micro_fund" element={<MicroFunding />} />
+        <Route path="/home_loan" element={<HomeLoan />} />
+        <Route path="/pvt_loan" element={<PvtLoan />} />
+        <Route path="/auto_loan" element={<AutoLoan />} />
         <Route path="/funds" element={<Funds />} />
-        <Route
-          path="/edu_loan"
-          element={<EduLoan />}
-        />
-        <Route
-          path="/contact"
-          element={<ContactPage />}
-        />
-        <Route
-          path="/appointment"
-          element={<BookingPage />}
-        />
+        <Route path="/edu_loan" element={<EduLoan />} />
+        <Route path="/contact" element={<ContactPage />} />
+        <Route path="/appointment" element={<BookingPage />} />
       </Routes>
       <Footer />
     </Router>
