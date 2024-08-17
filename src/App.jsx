@@ -37,7 +37,7 @@ function App() {
         <Route path="/funds" element={<Funds />} />
         <Route path="/edu_loan" element={<EduLoan />} />
         <Route path="/contact" element={<ContactPage />} />
-        <Route path="/appointment" element={<BookingPage />} />
+        <Route path="/appointment" element={<BookingPage />} /> 
       </Routes>
       <Footer />
     </Router>
